@@ -9,7 +9,7 @@
     </div>
     <div class="row">
       <div class="col-8 text-center">
-        <img src="/GreyDefault.png" alt="" class="doll">
+        <DollImage :doll="doll"/>
       </div>
     </div>
   </div>
@@ -19,22 +19,22 @@
 import { computed, onMounted } from "vue";
 import gsap from "gsap";
 import { AppState } from "../AppState.js";
+import DollImage from "../components/DollImage.vue";
 
 export default {
-  setup() {
-
-    onMounted(() => {
-      gsap.from(".title", {
-        duration: 3,
-        opacity: 0,
-        scale: 0.4
-      })
-    })
-
-    return {
-      doll: computed(() => AppState.doll)
-    }
-  }
+    setup() {
+        onMounted(() => {
+            gsap.from(".title", {
+                duration: 3,
+                opacity: 0,
+                scale: 0.4
+            });
+        });
+        return {
+            doll: computed(() => AppState.doll)
+        };
+    },
+    components: { DollImage }
 }
 </script>
 
@@ -44,9 +44,5 @@ export default {
     text-shadow: 0 4px 0 rgb(82, 13, 109);
     text-shadow: 0 0 4px white, 0 3px 0 rgb(64, 14, 87);
     font-size: 5.5em;
-  }
-
-  .doll{
-    height: 60vh;
   }
 </style>
