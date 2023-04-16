@@ -8,5 +8,13 @@ export const AppState = reactive({
   /** @type {import('./models/Account.js').Account} */
   account: {},
   /** @type {import('./models/Doll.js').Doll} */
-  doll: loadState('doll', Doll)
+  doll: loadState('doll', Doll),
+
+  boosts: [
+    {
+
+    },
+  ],
+
+  displaying: 'click',
 })
