@@ -1,16 +1,4 @@
-CodeWorks Vue Starter
+Who Do You VooDoo?
 =====================
-This template is designed to help get students started building vue applications
 
-## Legal Overview
-
-The content under the CodeWorks®, LLC Organization and all of the individual repos are solely intended for use by CodeWorks Instruction to deliver Educational content to CodeWorks Students.
-
----
-
-## Copyright
-
-© CodeWorks® LLC, 2021. Unauthorized use and/or duplication of this material without express and written permission from CodeWorks, LLC is strictly prohibited.
-
-
-<img src="https://bcw.blob.core.windows.net/public/img/7815839041305055" width="125">
+My lovely partner wanted me to make a clicker game like Moon Miner but with a customizable voodoo doll. I then couldn't pry her away from her tablet drawing all kinds of accessory variations on a little doll guy for hours. So I guess now I would be a real jerk if I didn't make this game for her using her cute lil guy :)
