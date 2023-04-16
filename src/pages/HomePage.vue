@@ -1,44 +1,52 @@
 <template>
-  <div class="home flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-    <div class="home-card p-5 bg-white rounded elevation-3">
-      <img
-        src="https://bcw.blob.core.windows.net/public/img/8600856373152463"
-        alt="CodeWorks Logo"
-        class="rounded-circle"
-      >
-      <h1 class="my-5 bg-dark text-white p-3 rounded text-center">
-        Vue 3 Starter
-      </h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 py-3 text-center title">
+        <span class="text-light">
+          Who Do You VooDoo?
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8 text-center">
+        <img src="/GreyDefault.png" alt="" class="doll">
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import { computed, onMounted } from "vue";
+import gsap from "gsap";
+import { AppState } from "../AppState.js";
+
 export default {
   setup() {
-    return {}
+
+    onMounted(() => {
+      gsap.from(".title", {
+        duration: 3,
+        opacity: 0,
+        scale: 0.4
+      })
+    })
+
+    return {
+      doll: computed(() => AppState.doll)
+    }
   }
 }
 </script>
 
 <style scoped lang="scss">
-.home {
-  display: grid;
-  height: 80vh;
-  place-content: center;
-  text-align: center;
-  user-select: none;
-
-  .home-card {
-    width: 50vw;
-
-    >img {
-      height: 200px;
-      max-width: 200px;
-      width: 100%;
-      object-fit: contain;
-      object-position: center;
-    }
+  .title{
+    font-family: 'Zeyada', cursive;
+    text-shadow: 0 4px 0 rgb(82, 13, 109);
+    text-shadow: 0 0 4px white, 0 3px 0 rgb(64, 14, 87);
+    font-size: 5.5em;
   }
-}
+
+  .doll{
+    height: 60vh;
+  }
 </style>
