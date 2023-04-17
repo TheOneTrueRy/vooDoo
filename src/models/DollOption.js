@@ -1,11 +1,9 @@
-export class Upgrade{
+export class DollOption{
   constructor(data){
     this.name = data.name
-    this.comment = data.comment
     this.description = data.description
     this.img = data.img
     this.price = data.price
-    this.value = data.value
-    this.quantity = data.quantity || 0
+    this.unlocked = data.unlocked
   }
 }

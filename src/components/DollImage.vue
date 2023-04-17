@@ -1,5 +1,5 @@
-<template v-if="doll">
-  <img v-if="doll.kit == 'default' && doll.color == 'grey' || !doll" src="/GreyDefault.png" alt="Doll" class="doll" @click="stab()">
+<template>
+  <img v-if="doll?.kit == 'default' && doll?.color == 'grey' || !doll" src="/GreyDefault.png" alt="Doll" class="doll" @click="stab()">
   <img v-else-if="doll.kit == 'default' && doll.color == 'red'" src="/RedDefault.png" alt="Doll" class="doll" @click="stab()">
   <img v-else-if="doll.kit == 'default' && doll.color == 'green'" src="/GreenDefault.png" alt="Doll" class="doll" @click="stab()">
   <img v-else-if="doll.kit == 'default' && doll.color == 'blue'" src="/BlueDefault.png" alt="Doll" class="doll" @click="stab()">

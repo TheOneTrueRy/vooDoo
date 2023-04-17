@@ -2,12 +2,15 @@ import { reactive } from 'vue'
 import { loadState } from "./utils/Store.js"
 import { Doll } from "./models/Doll.js"
 import { Upgrade } from "./models/Upgrade.js"
+import { DollOption } from "./models/DollOption.js"
 
 // NOTE AppState is a reactive object to contain app level data
 export const AppState = reactive({
-  user: {},
-  /** @type {import('./models/Account.js').Account} */
-  account: {},
+
+  dollOptionsData: loadState('dollOptions', [DollOption]),
+  clickUpgradesData: loadState('clickUpgrades', [Upgrade]),
+  autoUpgradesData: loadState('autoUpgrades', [Upgrade]),
+
   /** @type {import('./models/Doll.js').Doll} */
   doll: loadState('doll', Doll),
 
@@ -84,12 +87,6 @@ export const AppState = reactive({
       quantity: 0
     },
   ],
-
-  myClickUpgrades: loadState('clickUpgrades', [Upgrade]),
-
-  myAutoUpgrades: loadState('autoUpgrades', [Upgrade]),
-
-  
 
   displaying: 'click',
 })

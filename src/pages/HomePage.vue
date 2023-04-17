@@ -13,7 +13,7 @@
           </div>
         </div>
       </div>
-      <div class="col-3 h-100 bg-secondary border border-warning">
+      <div class="col-3 h-100 bg-dark border">
         <div class="row">
           <div class="col-12 text-center">
             <span class="HUGE">SHOP</span>
@@ -34,17 +34,17 @@
           </div>
         </div>
         <div class="row">
-          <div v-if="displaying == click" v-for="upgrade in clickUpgrades" class="col-12 px-1 py-2">
-            <Upgrade :upgrade="upgrade"/>
+          <div v-if="displaying == 'click'" v-for="upgrade in clickUpgrades" class="col-12 px-1 py-2">
+            <UpgradeCard :upgrade="upgrade"/>
           </div>
-          <div v-if="displaying == auto" v-for="upgrade in autoUpgrades" class="col-12 px-1 py-2">
-            <Upgrade :upgrade="upgrade"/>
+          <div v-if="displaying == 'auto'" v-for="upgrade in autoUpgrades" class="col-12 px-1 py-2">
+            <UpgradeCard :upgrade="upgrade"/>
           </div>
-          <div v-if="displaying == boost" v-for="upgrade in boosts" class="col-12 px-1 py-2">
-            <Upgrade :upgrade="upgrade"/>
+          <div v-if="displaying == 'boost'" v-for="upgrade in boosts" class="col-12 px-1 py-2">
+            <UpgradeCard :upgrade="upgrade"/>
           </div>
-          <div v-if="displaying == doll" v-for="upgrade in dollOptions" class="col-12 px-1 py-2">
-            <Upgrade :upgrade="upgrade"/>
+          <div v-if="displaying == 'doll'" v-for="upgrade in dollOptions" class="col-12 px-1 py-2">
+            <UpgradeCard :upgrade="upgrade"/>
           </div>
         </div>
       </div>
@@ -58,16 +58,25 @@ import gsap from "gsap";
 import { AppState } from "../AppState.js";
 import DollImage from "../components/DollImage.vue";
 import Pop from "../utils/Pop.js";
-import { Upgrade } from "../models/Upgrade.js";
+import { loadService } from "../services/LoadService.js";
+import UpgradeCard from "../components/UpgradeCard.vue";
 
 export default {
     setup() {
+      function loadEverything(){
+        try {
+          loadService.loadEverything()
+        } catch (error) {
+          Pop.error(error.message, 'Testing Load')
+        }
+      }
         onMounted(() => {
             gsap.from(".title", {
                 duration: 3,
                 opacity: 0,
                 scale: 0.4
             });
+            loadEverything()
         });
         return {
             doll: computed(() => AppState.doll),
@@ -85,7 +94,7 @@ export default {
             },
         };
     },
-    components: { DollImage, Upgrade }
+    components: { DollImage, Upgrade, UpgradeCard }
 }
 </script>
 
@@ -103,11 +112,11 @@ export default {
 
   .my-select:hover{
     cursor: pointer;
-    color: rgb(104, 16, 16);
+    color: #a9395b;
   }
 
   .selected{
-    color: rgb(104, 16, 16);
-    border-bottom: 3px solid rgb(104, 16, 16) !important;
+    color: #a9395b;
+    border-bottom: 3px solid #a9395b !important;
   }
 </style>
