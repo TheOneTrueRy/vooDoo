@@ -1,25 +1,25 @@
 <template>
   <div class="row rounded elevation-2 border border-dark bg-dark bg-gradient upgradeCard">
     <div class="col-3 text-center g-0 h-100">
-      <img :src="upgrade.img" :alt="upgrade.name" height="60" width="60">
+      <img :src="boost.img" :alt="boost.name" height="60" width="60">
     </div>
     <div class="col-6 d-flex flex-column h-100">
       <span class="fs-5">
-        {{ upgrade.name }}
+        {{ boost.name }}
       </span>
       <span>
         <i>
-          {{ upgrade.comment }}
+          {{ boost.comment }}
         </i>
       </span>
       <span>
-        {{ upgrade.description }}
+        {{ boost.description }}
       </span>
     </div>
     <div class="col-3 g-0 d-flex align-items-center justify-content-center h-100">
       <button class="btn purchase-btn bg-gradient">
         <span>
-          Purchase
+          Activate
         </span>
       </button>
     </div>
@@ -30,7 +30,7 @@
 <script>
 export default {
   props: {
-    upgrade: {type: Object, required: true}
+    boost: {type: Object, required: true}
   },
   setup(){
     return {}

@@ -1,19 +1,17 @@
 <template>
   <div class="row rounded elevation-2 border border-dark bg-dark bg-gradient upgradeCard">
     <div class="col-3 text-center g-0 h-100">
-      <img :src="upgrade.img" :alt="upgrade.name" height="60" width="60">
+      <img v-if="option.unlocked" :src="option.img" :alt="option.name" height="60" width="60">
+      <img v-else-if="!option.unlocked" :src="option.silhouette" :alt="option.name" height="60" width="60">
     </div>
     <div class="col-6 d-flex flex-column h-100">
       <span class="fs-5">
-        {{ upgrade.name }}
+        {{ option.name }}
       </span>
       <span>
         <i>
-          {{ upgrade.comment }}
+          {{ option.description }}
         </i>
-      </span>
-      <span>
-        {{ upgrade.description }}
       </span>
     </div>
     <div class="col-3 g-0 d-flex align-items-center justify-content-center h-100">
@@ -28,9 +26,11 @@
 
 
 <script>
+import { DollOption } from "../models/DollOption.js";
+
 export default {
   props: {
-    upgrade: {type: Object, required: true}
+    option: {type: DollOption, required: true}
   },
   setup(){
     return {}

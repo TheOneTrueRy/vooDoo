@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid vh-100">
     <div class="row h-100">
-      <div class="col-9">
+      <div class="col-8">
         <div class="row">
           <div class="col-12 text-center title">
             <span>
@@ -13,10 +13,10 @@
           </div>
         </div>
       </div>
-      <div class="col-3 h-100 bg-dark border">
-        <div class="row">
+      <div class="col-4 vh-100 shop-bg border">
+        <div class="row shop-top">
           <div class="col-12 text-center">
-            <span class="HUGE">SHOP</span>
+            
           </div>
         </div>
         <div class="row px-1">
@@ -34,17 +34,17 @@
           </div>
         </div>
         <div class="row">
-          <div v-if="displaying == 'click'" v-for="upgrade in clickUpgrades" class="col-12 px-1 py-2">
+          <div v-if="displaying == 'click'" v-for="upgrade in clickUpgrades" class="col-12 px-4 py-2">
             <UpgradeCard :upgrade="upgrade"/>
           </div>
-          <div v-if="displaying == 'auto'" v-for="upgrade in autoUpgrades" class="col-12 px-1 py-2">
+          <div v-if="displaying == 'auto'" v-for="upgrade in autoUpgrades" class="col-12 px-4 py-2">
             <UpgradeCard :upgrade="upgrade"/>
           </div>
-          <div v-if="displaying == 'boost'" v-for="upgrade in boosts" class="col-12 px-1 py-2">
-            <UpgradeCard :upgrade="upgrade"/>
+          <div v-if="displaying == 'boost'" v-for="boost in boosts" class="col-12 px-4 py-2">
+            <BoostCard :boost="boost"/>
           </div>
-          <div v-if="displaying == 'doll'" v-for="upgrade in dollOptions" class="col-12 px-1 py-2">
-            <UpgradeCard :upgrade="upgrade"/>
+          <div v-if="displaying == 'doll'" v-for="option in dollOptions" class="col-12 px-4 py-2">
+            <DollOptionCard :option="option"/>
           </div>
         </div>
       </div>
@@ -60,6 +60,8 @@ import DollImage from "../components/DollImage.vue";
 import Pop from "../utils/Pop.js";
 import { loadService } from "../services/LoadService.js";
 import UpgradeCard from "../components/UpgradeCard.vue";
+import DollOptionCard from "../components/DollOptionCard.vue";
+import BoostCard from "../components/BoostCard.vue";
 
 export default {
     setup() {
@@ -94,7 +96,7 @@ export default {
             },
         };
     },
-    components: { DollImage, Upgrade, UpgradeCard }
+    components: { DollImage, UpgradeCard, DollOptionCard, BoostCard }
 }
 </script>
 
@@ -118,5 +120,22 @@ export default {
   .selected{
     color: #a9395b;
     border-bottom: 3px solid #a9395b !important;
+  }
+
+  .shop-bg{
+    background-image: url("/Shop-BG.png");
+    background-size: cover;
+  }
+
+  .shop-top{
+    height: 13.5vw;
+  }
+
+  .my-overflow{
+    overflow-y: scroll;
+  }
+
+  .my-overflow::-webkit-scrollbar{
+    display: none;
   }
 </style>

@@ -6,6 +6,6 @@ export class Upgrade{
     this.img = data.img
     this.price = data.price
     this.value = data.value
-    this.quantity = data.quantity || 0
+    this.quantity = data.quantity
   }
 }

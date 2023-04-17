@@ -5,5 +5,6 @@ export class DollOption{
     this.img = data.img
     this.price = data.price
     this.unlocked = data.unlocked
+    this.equipped = data.equipped
   }
 }

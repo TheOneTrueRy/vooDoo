@@ -10,9 +10,13 @@ export const AppState = reactive({
   dollOptionsData: loadState('dollOptions', [DollOption]),
   clickUpgradesData: loadState('clickUpgrades', [Upgrade]),
   autoUpgradesData: loadState('autoUpgrades', [Upgrade]),
+  dollData: loadState('doll', Doll),
 
   /** @type {import('./models/Doll.js').Doll} */
-  doll: loadState('doll', Doll),
+  doll: {
+    kit: 'default',
+    color: 'grey'
+  },
 
   boosts: [
     {
@@ -32,7 +36,7 @@ export const AppState = reactive({
       active: false
     },
     {
-      name: 'Extended Warranty',
+      name: 'Extended Warranty (Scam)',
       comment: `We've been trying to reach you`,
       description: '',
       price: 0,
@@ -40,7 +44,7 @@ export const AppState = reactive({
       active: false
     },
     {
-      name: 'IRS Audit',
+      name: 'IRS Audit (Real)',
       comment: `Looks like somebody didn't pay the man`,
       description: '',
       price: 0,
@@ -48,13 +52,14 @@ export const AppState = reactive({
       active: false
     },
   ],
-  /** @type {import('./models/Upgrade.js').Upgrade[]} */
 
+  /** @type {import('./models/Upgrade.js').Upgrade[]} */
   clickUpgrades: [
     {
       name: 'Thimble',
-      comment: 'That needle could be a little sharper...',
+      comment: 'That needle could be a little sharper',
       description: 'Increases your click gain by 1.',
+      img: '',
       price: 50,
       value: 1,
       quantity: 0
@@ -63,6 +68,7 @@ export const AppState = reactive({
       name: 'Emery Bag',
       comment: '',
       description: '',
+      img: '',
       price: 0,
       value: 0,
       quantity: 0
@@ -74,6 +80,7 @@ export const AppState = reactive({
       name: 'Minor Misfortune',
       comment: '',
       description: '',
+      img: '',
       price: 0,
       value: 0,
       quantity: 0
@@ -82,9 +89,95 @@ export const AppState = reactive({
       name: 'Bad Luck Streak',
       comment: `They just can't catch a break...`,
       description: '',
+      img: '',
       price: 0,
       value: 0,
       quantity: 0
+    },
+  ],
+
+  /** @type {import('./models/DollOption.js').DollOption[]} */
+  dollOptions: [
+    {
+      name: `Plain Ol' Doll`,
+      description: `He can take it!`,
+      img: `/GreyDefault.png`,
+      silhouette: ``,
+      price: 0,
+      unlocked: true,
+      equipped: true,
+    },
+    {
+      name: `Dolldevil`,
+      description: `Go to Hell.`,
+      img: `/GreyDevil.png`,
+      silhouette: `/SilhouetteDevil.png`,
+      price: 0,
+      unlocked: false,
+      equipped: false,
+    },
+    {
+      name: ``,
+      description: `Worship me.`,
+      img: `/GreyAngel.png`,
+      silhouette: `/SilhouetteAngel.png`,
+      price: 0,
+      unlocked: false,
+      equipped: false,
+    },
+    {
+      name: ``,
+      description: `UWU!`,
+      img: `/GreyCat.png`,
+      silhouette: `/SilhouetteCat.png`,
+      price: 0,
+      unlocked: false,
+      equipped: false,
+    },
+    {
+      name: `BOB`,
+      description: `Chug! Chug! Chug!`,
+      img: `/GreyBob.png`,
+      silhouette: `/SilhouetteBob.png`,
+      price: 0,
+      unlocked: false,
+      equipped: false,
+    },
+    {
+      name: `Ghastly Grey`,
+      description: `A Classic.`,
+      img: `/GreyYarn.png`,
+      silhouette: `/SilhouetteYarn.png`,
+      price: 0,
+      unlocked: true,
+      equipped: true,
+    },
+    {
+      name: `Bullied Blue`,
+      description: ``,
+      img: `/BlueYarn.png`,
+      silhouette: `/SilhouetteYarn.png`,
+      price: 0,
+      unlocked: false,
+      equipped: false,
+    },
+    {
+      name: `Growing Green`,
+      description: ``,
+      img: `/GreenYarn.png`,
+      silhouette: `/SilhouetteYarn.png`,
+      price: 0,
+      unlocked: false,
+      equipped: false,
+    },
+    {
+      name: `Raging Red`,
+      description: ``,
+      img: `/RedYarn.png`,
+      silhouette: `/SilhouetteYarn.png`,
+      price: 0,
+      unlocked: false,
+      equipped: false,
     },
   ],
 
