@@ -13,32 +13,32 @@ export const AppState = reactive({
 
   boosts: [
     {
-      name: '',
-      comment: '',
+      name: 'Warm Pillow',
+      comment: `Yeah, THIS'LL teach em!`,
       description: '',
       price: 0,
       value: 0,
       active: false
     },
     {
-      name: '',
-      comment: '',
+      name: 'Unevenly Heated Burrito',
+      comment: 'Hope you enjoy a sudden frozen spot',
       description: '',
       price: 0,
       value: 0,
       active: false
     },
     {
-      name: '',
-      comment: '',
+      name: 'Extended Warranty',
+      comment: `We've been trying to reach you`,
       description: '',
       price: 0,
       value: 0,
       active: false
     },
     {
-      name: '',
-      comment: '',
+      name: 'IRS Audit',
+      comment: `Looks like somebody didn't pay the man`,
       description: '',
       price: 0,
       value: 0,
@@ -49,35 +49,39 @@ export const AppState = reactive({
 
   clickUpgrades: [
     {
-      name: '',
-      comment: '',
-      description: '',
-      price: 0,
-      value: 0,
+      name: 'Thimble',
+      comment: 'That needle could be a little sharper...',
+      description: 'Increases your click gain by 1.',
+      price: 50,
+      value: 1,
+      quantity: 0
     },
     {
-      name: '',
+      name: 'Emery Bag',
       comment: '',
       description: '',
       price: 0,
       value: 0,
+      quantity: 0
     },
   ],
 
   autoUpgrades: [
     {
-      name: '',
+      name: 'Minor Misfortune',
       comment: '',
       description: '',
       price: 0,
       value: 0,
+      quantity: 0
     },
     {
-      name: '',
-      comment: '',
+      name: 'Bad Luck Streak',
+      comment: `They just can't catch a break...`,
       description: '',
       price: 0,
       value: 0,
+      quantity: 0
     },
   ],
 

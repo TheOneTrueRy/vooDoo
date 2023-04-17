@@ -8,6 +8,9 @@
               Who Do You VooDoo?
             </span>
           </div>
+          <div class="col-12 text-center">
+            <DollImage/>
+          </div>
         </div>
       </div>
       <div class="col-3 h-100 bg-secondary border border-warning">
@@ -30,6 +33,20 @@
             <span class="fs-5">Doll</span>
           </div>
         </div>
+        <div class="row">
+          <div v-if="displaying == click" v-for="upgrade in clickUpgrades" class="col-12 px-1 py-2">
+            <Upgrade :upgrade="upgrade"/>
+          </div>
+          <div v-if="displaying == auto" v-for="upgrade in autoUpgrades" class="col-12 px-1 py-2">
+            <Upgrade :upgrade="upgrade"/>
+          </div>
+          <div v-if="displaying == boost" v-for="upgrade in boosts" class="col-12 px-1 py-2">
+            <Upgrade :upgrade="upgrade"/>
+          </div>
+          <div v-if="displaying == doll" v-for="upgrade in dollOptions" class="col-12 px-1 py-2">
+            <Upgrade :upgrade="upgrade"/>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -41,6 +58,7 @@ import gsap from "gsap";
 import { AppState } from "../AppState.js";
 import DollImage from "../components/DollImage.vue";
 import Pop from "../utils/Pop.js";
+import { Upgrade } from "../models/Upgrade.js";
 
 export default {
     setup() {
@@ -54,6 +72,10 @@ export default {
         return {
             doll: computed(() => AppState.doll),
             displaying: computed(() => AppState.displaying),
+            clickUpgrades: computed(() => AppState.clickUpgrades),
+            autoUpgrades: computed(() => AppState.autoUpgrades),
+            boosts: computed(() => AppState.boosts),
+            dollOptions: computed(() => AppState.dollOptions),
             changeDisplaying(string){
               try {
                 AppState.displaying = string
@@ -63,7 +85,7 @@ export default {
             },
         };
     },
-    components: { DollImage }
+    components: { DollImage, Upgrade }
 }
 </script>
 
