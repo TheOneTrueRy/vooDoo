@@ -207,5 +207,11 @@ export const AppState = reactive({
 
   cursePoints: 0,
 
-  displaying: 'click',
+  judgement: false,
+  spite: false,
+  manipulation: false,
+  recklessness: false,
+  pettiness: false,
+
+  displaying: 'doll',
 })

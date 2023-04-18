@@ -37,6 +37,9 @@
         <div class="row shop-top"> 
         </div>
         <div class="row px-1">
+          <div class="col-3 g-0 text-center bg-dark bg-gradient py-2 border border-dark my-select" :class="[displaying == 'doll' ? 'selected' : '']" @click="changeDisplaying('doll')">
+            <span class="fs-5">Doll</span>
+          </div>
           <div class="col-3 g-0 text-center bg-dark bg-gradient py-2 border border-dark my-select" :class="[displaying == 'click' ? 'selected' : '']" @click="changeDisplaying('click')">
             <span class="fs-5">Click</span>
           </div>
@@ -45,9 +48,6 @@
           </div>
           <div class="col-3 g-0 text-center bg-dark bg-gradient py-2 border border-dark my-select" :class="[displaying == 'boost' ? 'selected' : '']" @click="changeDisplaying('boost')">
             <span class="fs-5">Boost</span>
-          </div>
-          <div class="col-3 g-0 text-center bg-dark bg-gradient py-2 border border-dark my-select" :class="[displaying == 'doll' ? 'selected' : '']" @click="changeDisplaying('doll')">
-            <span class="fs-5">Doll</span>
           </div>
         </div>
         <div class="row my-overflow">
@@ -160,7 +160,7 @@ export default {
 
   .my-overflow{
     overflow-y: scroll;
-    height: 67vh;
+    max-height: 67vh;
   }
 
   .my-overflow::-webkit-scrollbar{

@@ -17,19 +17,9 @@
       </span>
     </div>
     <div class="col-3 g-0 d-flex align-items-center justify-content-center h-100">
-      <button v-if="!upgrade.unlocked && !upgrade.equipped" class="btn purchase-btn bg-gradient">
+      <button class="btn purchase-btn bg-gradient">
         <span>
           Purchase
-        </span>
-      </button>
-      <button v-if="upgrade.unlocked && !upgrade.equipped" class="btn purchase-btn bg-gradient">
-        <span>
-          Equip
-        </span>
-      </button>
-      <button v-if="upgrade.unlocked && upgrade.equipped" class="btn purchase-btn bg-gradient" disabled>
-        <span>
-          Equipped
         </span>
       </button>
     </div>

@@ -21,11 +21,6 @@ class LoadService{
     if(AppState.cursePointsData > 0){
       AppState.cursePoints = AppState.cursePointsData
     }
-    if(AppState.dollNameData){
-      AppState.dollNameData.join('')
-      logger.log(AppState.dollNameData)
-      // AppState.dollName = AppState.dollNameData
-    }
   }
 }
 
