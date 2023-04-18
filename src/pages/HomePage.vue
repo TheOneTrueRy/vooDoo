@@ -50,7 +50,7 @@
             <span class="fs-5">Doll</span>
           </div>
         </div>
-        <div class="row">
+        <div class="row my-overflow">
           <div v-if="displaying == 'click'" v-for="upgrade in clickUpgrades" class="col-12 px-4 py-2">
             <UpgradeCard :upgrade="upgrade"/>
           </div>
@@ -160,6 +160,7 @@ export default {
 
   .my-overflow{
     overflow-y: scroll;
+    height: 67vh;
   }
 
   .my-overflow::-webkit-scrollbar{

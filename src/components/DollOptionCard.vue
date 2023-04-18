@@ -1,8 +1,8 @@
 <template>
   <div class="row rounded elevation-2 border border-dark bg-dark bg-gradient upgradeCard">
-    <div class="col-3 text-center g-0 h-100">
-      <img v-if="option.unlocked" :src="option.img" :alt="option.name" height="60" width="60">
-      <img v-else-if="!option.unlocked" :src="option.silhouette" :alt="option.name" height="60" width="60">
+    <div class="col-3 d-flex justify-content-center align-items-center g-0 h-100">
+      <img v-if="option.unlocked" :src="option.img" :alt="option.name" height="120" width="100">
+      <img v-else-if="!option.unlocked" :src="option.silhouette" :alt="option.name" height="120" width="100">
     </div>
     <div class="col-6 d-flex flex-column h-100">
       <span class="fs-5">
@@ -41,7 +41,7 @@ export default {
 
 <style lang="scss" scoped>
   .upgradeCard{
-    height: 90px;
+    height: 140px;
   }
 
   .purchase-btn{

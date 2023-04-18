@@ -72,7 +72,7 @@ export const AppState = reactive({
       description: '',
       img: '/Emery-Bag.png',
       price: 0,
-      value: 0,
+      value: 5,
       quantity: 0
     },
   ],
@@ -82,7 +82,7 @@ export const AppState = reactive({
       name: 'Minor Misfortune',
       comment: '',
       description: '',
-      img: '',
+      img: '/Salt.png',
       price: 0,
       value: 0,
       quantity: 0
@@ -146,6 +146,15 @@ export const AppState = reactive({
       equipped: false,
     },
     {
+      name: `Karen`,
+      description: ``,
+      img: `/GreyKaren.png`,
+      silhouette: `/SilhouetteKaren.png`,
+      price: 0,
+      unlocked: false,
+      equipped: false,
+    },
+    {
       name: `Ghastly Grey`,
       description: `A Classic.`,
       img: `/GreyYarn.png`,
@@ -181,6 +190,15 @@ export const AppState = reactive({
       unlocked: false,
       equipped: false,
     },
+    {
+      name: `Pulsing Purple`,
+      description: ``,
+      img: `/PurpleYarn.png`,
+      silhouette: `/SilhouetteYarn.png`,
+      price: 0,
+      unlocked: false,
+      equipped: false,
+    }
   ],
 
   clickAmount: 1,
