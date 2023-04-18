@@ -16,7 +16,8 @@ export const AppState = reactive({
   /** @type {import('./models/Doll.js').Doll} */
   doll: {
     kit: 'default',
-    color: 'grey'
+    color: 'grey',
+    name: 'Name Your Doll'
   },
 
   boosts: [
@@ -69,7 +70,7 @@ export const AppState = reactive({
       name: 'Emery Bag',
       comment: '',
       description: '',
-      img: '',
+      img: '/Emery-Bag.png',
       price: 0,
       value: 0,
       quantity: 0
@@ -187,8 +188,6 @@ export const AppState = reactive({
   autoAmount: 0,
 
   cursePoints: 0,
-
-  dollName: 'Jeff',
 
   displaying: 'click',
 })

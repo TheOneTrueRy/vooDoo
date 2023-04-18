@@ -10,7 +10,7 @@
           </div>
           <div class="col-12 text-center">
             <form @submit.prevent="updateName()">
-              <input v-model="dollName" type="text" name="" id="" class="fs-1 text-center text-light border rounded">
+              <input v-model="dollName" type="text" name="doll-name" id="doll-name" class="fs-1 text-center text-light border rounded">
             </form>
           </div>
           <div class="col-12 text-center">
@@ -19,7 +19,9 @@
           <div class="col-12 px-5 py-2">
             <div class="row rounded border border-dark bg-light">
               <div class="col-12 d-flex justify-content-center py-2">
-                <span></span>
+                <span class="fs-5">
+                  {{ cursePoints }}
+                </span>
               </div>
               <div class="col-6 text-center py-2">
                 <span>{{ clickAmount }} per click</span>
@@ -77,11 +79,11 @@ import { loadService } from "../services/LoadService.js";
 import UpgradeCard from "../components/UpgradeCard.vue";
 import DollOptionCard from "../components/DollOptionCard.vue";
 import BoostCard from "../components/BoostCard.vue";
-import { logger } from "../utils/Logger.js";
+import { dollService } from "../services/DollService.js";
 
 export default {
     setup() {
-      const dollName = ref(AppState.dollName)
+      const dollName = ref(AppState.doll.name)
       function loadEverything(){
         try {
           loadService.loadEverything()
@@ -106,6 +108,7 @@ export default {
             dollOptions: computed(() => AppState.dollOptions),
             clickAmount: computed(() => AppState.clickAmount),
             autoAmount: computed(() => AppState.autoAmount),
+            cursePoints: computed(() => AppState.cursePoints),
             dollName,
             changeDisplaying(string){
               try {
