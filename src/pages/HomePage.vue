@@ -84,20 +84,13 @@ import { dollService } from "../services/DollService.js";
 export default {
     setup() {
       const dollName = ref(AppState.doll.name)
-      function loadEverything(){
-        try {
-          loadService.loadEverything()
-        } catch (error) {
-          Pop.error(error.message, 'Testing Load')
-        }
-      }
         onMounted(() => {
             gsap.from(".title", {
                 duration: 3,
                 opacity: 0,
                 scale: 0.4
             });
-            loadEverything()
+
         });
         return {
             doll: computed(() => AppState.doll),

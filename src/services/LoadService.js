@@ -13,10 +13,10 @@ class LoadService{
     if(AppState.dollOptionsData.length > 0){
       AppState.dollOptions = AppState.dollOptionsData
     }
-    if(AppState.dollData){
-      logger.log(AppState.dollData)
+    if(AppState.dollData.name != undefined){
+      logger.log(AppState.dollData, 'AppState.dollData')
       AppState.doll = AppState.dollData
-      logger.log(AppState.doll)
+      logger.log(AppState.doll, 'AppState.doll')
     }
     if(AppState.cursePointsData > 0){
       AppState.cursePoints = AppState.cursePointsData
