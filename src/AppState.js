@@ -11,6 +11,7 @@ export const AppState = reactive({
   clickUpgradesData: loadState('clickUpgrades', [Upgrade]),
   autoUpgradesData: loadState('autoUpgrades', [Upgrade]),
   dollData: loadState('doll', Doll),
+  cursePointsData: loadState('cursePointsData', Number),
 
   /** @type {import('./models/Doll.js').Doll} */
   doll: {
@@ -59,7 +60,7 @@ export const AppState = reactive({
       name: 'Thimble',
       comment: 'That needle could be a little sharper',
       description: 'Increases your click gain by 1.',
-      img: '',
+      img: '/Thimble.png',
       price: 50,
       value: 1,
       quantity: 0
@@ -180,6 +181,14 @@ export const AppState = reactive({
       equipped: false,
     },
   ],
+
+  clickAmount: 1,
+
+  autoAmount: 0,
+
+  cursePoints: 0,
+
+  dollName: 'Jeff',
 
   displaying: 'click',
 })

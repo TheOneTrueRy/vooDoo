@@ -9,15 +9,30 @@
             </span>
           </div>
           <div class="col-12 text-center">
+            <form @submit.prevent="updateName()">
+              <input v-model="dollName" type="text" name="" id="" class="fs-1 text-center text-light border rounded">
+            </form>
+          </div>
+          <div class="col-12 text-center">
             <DollImage/>
+          </div>
+          <div class="col-12 px-5 py-2">
+            <div class="row rounded border border-dark bg-light">
+              <div class="col-12 d-flex justify-content-center py-2">
+                <span></span>
+              </div>
+              <div class="col-6 text-center py-2">
+                <span>{{ clickAmount }} per click</span>
+              </div>
+              <div class="col-6 text-center py-2">
+                <span></span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-4 vh-100 shop-bg border">
-        <div class="row shop-top">
-          <div class="col-12 text-center">
-            
-          </div>
+        <div class="row shop-top"> 
         </div>
         <div class="row px-1">
           <div class="col-3 g-0 text-center bg-dark bg-gradient py-2 border border-dark my-select" :class="[displaying == 'click' ? 'selected' : '']" @click="changeDisplaying('click')">
@@ -53,7 +68,7 @@
 </template>
 
 <script>
-import { computed, onMounted } from "vue";
+import { computed, onMounted, ref } from "vue";
 import gsap from "gsap";
 import { AppState } from "../AppState.js";
 import DollImage from "../components/DollImage.vue";
@@ -62,9 +77,11 @@ import { loadService } from "../services/LoadService.js";
 import UpgradeCard from "../components/UpgradeCard.vue";
 import DollOptionCard from "../components/DollOptionCard.vue";
 import BoostCard from "../components/BoostCard.vue";
+import { logger } from "../utils/Logger.js";
 
 export default {
     setup() {
+      const dollName = ref(AppState.dollName)
       function loadEverything(){
         try {
           loadService.loadEverything()
@@ -87,6 +104,9 @@ export default {
             autoUpgrades: computed(() => AppState.autoUpgrades),
             boosts: computed(() => AppState.boosts),
             dollOptions: computed(() => AppState.dollOptions),
+            clickAmount: computed(() => AppState.clickAmount),
+            autoAmount: computed(() => AppState.autoAmount),
+            dollName,
             changeDisplaying(string){
               try {
                 AppState.displaying = string
@@ -94,6 +114,10 @@ export default {
                 Pop.error(error.message, 'Changing Displaying')
               }
             },
+            updateName(){
+              let dollNameData = dollName.value
+              dollService.updateName(dollNameData)
+            }
         };
     },
     components: { DollImage, UpgradeCard, DollOptionCard, BoostCard }
@@ -137,5 +161,10 @@ export default {
 
   .my-overflow::-webkit-scrollbar{
     display: none;
+  }
+
+  input{
+    background-color: transparent;
+    border: none;
   }
 </style>

@@ -10,6 +10,15 @@ class LoadService{
     if(AppState.autoUpgradesData.length > 0){
       AppState.autoUpgrades = AppState.autoUpgradesData
     }
+    if(AppState.dollOptionsData.length > 0){
+      AppState.dollOptions = AppState.dollOptionsData
+    }
+    if(AppState.dollData){
+      AppState.doll = AppState.dollData
+    }
+    if(AppState.cursePointsData){
+      AppState.cursePoints = AppState.cursePointsData
+    }
   }
 }
 
