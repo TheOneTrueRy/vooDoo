@@ -11,9 +11,14 @@
       <span v-else class="fs-5">
         ???
       </span>
-      <span>
+      <span v-if="option.unlocked">
         <i>
           {{ option.description }}
+        </i>
+      </span>
+      <span v-else>
+        <i>
+          ??????
         </i>
       </span>
     </div>
