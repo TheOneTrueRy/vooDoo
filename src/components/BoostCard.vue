@@ -1,7 +1,7 @@
 <template>
   <div class="row rounded elevation-2 border border-dark bg-dark bg-gradient upgradeCard">
-    <div class="col-3 text-center g-0 h-100">
-      <img :src="boost.img" :alt="boost.name" height="60" width="60">
+    <div class="col-3 d-flex align-items-center justify-content-center g-0 h-100">
+      <img :src="boost.img" :alt="boost.name" height="90" width="90">
     </div>
     <div class="col-6 d-flex flex-column h-100">
       <span class="fs-5">

@@ -36,7 +36,7 @@
       <div class="col-4 vh-100 shop-bg border">
         <div class="row shop-top"> 
         </div>
-        <div class="row px-1">
+        <div class="row shop-mid px-1">
           <div class="col-3 g-0 text-center bg-dark bg-gradient py-2 border border-dark my-select" :class="[displaying == 'doll' ? 'selected' : '']" @click="changeDisplaying('doll')">
             <span class="fs-5">Doll</span>
           </div>
@@ -148,12 +148,16 @@ export default {
   }
 
   .shop-top{
-    height: 13.5vw;
+    height: 27%;
+  }
+
+  .shop-mid{
+    height: 6%;
   }
 
   .my-overflow{
     overflow-y: scroll;
-    max-height: 67vh;
+    max-height: 67%;
   }
 
   .my-overflow::-webkit-scrollbar{

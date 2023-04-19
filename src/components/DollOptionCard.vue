@@ -5,8 +5,11 @@
       <img v-else-if="!option.unlocked" :src="option.silhouette" :alt="option.name" height="120" width="100">
     </div>
     <div class="col-6 d-flex flex-column h-100">
-      <span class="fs-5">
+      <span v-if="option.unlocked" class="fs-5">
         {{ option.name }}
+      </span>
+      <span v-else class="fs-5">
+        ???
       </span>
       <span>
         <i>

@@ -25,6 +25,7 @@ export const AppState = reactive({
       name: 'Warm Pillow',
       comment: `Yeah, THIS'LL teach em!`,
       description: '',
+      img: '/WarmPillow.png',
       price: 0,
       value: 0,
       active: false
@@ -33,6 +34,7 @@ export const AppState = reactive({
       name: 'Unevenly Heated Burrito',
       comment: 'Hope you enjoy a sudden frozen spot',
       description: '',
+      img: '/ColdBurrito.png',
       price: 0,
       value: 0,
       active: false
@@ -41,6 +43,7 @@ export const AppState = reactive({
       name: 'Extended Warranty (Scam)',
       comment: `We've been trying to reach you`,
       description: '',
+      img: '/ExtendedWarranty.png',
       price: 0,
       value: 0,
       active: false
@@ -49,6 +52,7 @@ export const AppState = reactive({
       name: 'IRS Audit (Real)',
       comment: `Looks like somebody didn't pay the man`,
       description: '',
+      img: '/IRSAudit.png',
       price: 0,
       value: 0,
       active: false
@@ -80,7 +84,7 @@ export const AppState = reactive({
   autoUpgrades: [
     {
       name: 'Minor Misfortune',
-      comment: '',
+      comment: `This'll make 'em salty.`,
       description: '',
       img: '/Salt.png',
       price: 0,
@@ -91,7 +95,7 @@ export const AppState = reactive({
       name: 'Bad Luck Streak',
       comment: `They just can't catch a break...`,
       description: '',
-      img: '',
+      img: '/BrokenMirror.png',
       price: 0,
       value: 0,
       quantity: 0
@@ -102,7 +106,7 @@ export const AppState = reactive({
   dollOptions: [
     {
       name: `Plain Ol' Doll`,
-      description: `He can take it!`,
+      description: `I can take it!`,
       img: `/GreyDefault.png`,
       silhouette: ``,
       price: 0,
@@ -147,7 +151,7 @@ export const AppState = reactive({
     },
     {
       name: `Karen`,
-      description: ``,
+      description: `Let me speak to your manager.`,
       img: `/GreyKaren.png`,
       silhouette: `/SilhouetteKaren.png`,
       price: 0,
