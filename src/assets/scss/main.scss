@@ -40,3 +40,8 @@ form:invalid button[type="submit"] {
   filter: grayscale(1);
   pointer-events: none;
 }
+
+img{
+  user-select: none;
+  -webkit-user-drag: none;
+}
