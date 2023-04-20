@@ -22,6 +22,12 @@ class LoadService{
       logger.log(AppState.cursePointsData)
       AppState.cursePoints = AppState.cursePointsData
     }
+    AppState.clickUpgrades.forEach(u => {
+      AppState.clickAmount += (u.value * u.quantity)
+    })
+    AppState.autoUpgrades.forEach(u => {
+      AppState.autoAmount += (u.value * u.quantity)
+    })
   }
 }
 

@@ -17,7 +17,7 @@
       </span>
     </div>
     <div class="col-3 g-0 d-flex flex-column align-items-center justify-content-center h-100">
-      <button class="btn purchase-btn bg-gradient">
+      <button class="btn purchase-btn bg-gradient" @click="purchaseClickUpgrade(upgrade.name)">
         <span>
           Purchase
         </span>
@@ -31,12 +31,23 @@
 
 
 <script>
+import { upgradeService } from "../services/UpgradeService.js";
+import Pop from "../utils/Pop.js";
+
 export default {
   props: {
     upgrade: {type: Object, required: true}
   },
   setup(){
-    return {}
+    return {
+      purchaseClickUpgrade(upgradeName){
+        try {
+          upgradeService.purchaseClickUpgrade(upgradeName)
+        } catch (error) {
+          Pop.error(error.message, 'Purchasing Upgrade')
+        }
+      }
+    }
   }
 }
 </script>

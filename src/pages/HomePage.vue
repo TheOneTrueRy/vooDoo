@@ -63,10 +63,10 @@
         </div>
         <div class="row my-overflow">
           <div v-if="displaying == 'click'" v-for="upgrade in clickUpgrades" class="col-12 px-4 py-2">
-            <UpgradeCard :upgrade="upgrade"/>
+            <ClickUpgradeCard :upgrade="upgrade"/>
           </div>
           <div v-if="displaying == 'auto'" v-for="upgrade in autoUpgrades" class="col-12 px-4 py-2">
-            <UpgradeCard :upgrade="upgrade"/>
+            <AutoUpgradeCard :upgrade="upgrade"/>
           </div>
           <div v-if="displaying == 'boost'" v-for="boost in boosts" class="col-12 px-4 py-2">
             <BoostCard :boost="boost"/>
@@ -86,7 +86,8 @@ import gsap from "gsap";
 import { AppState } from "../AppState.js";
 import DollImage from "../components/DollImage.vue";
 import Pop from "../utils/Pop.js";
-import UpgradeCard from "../components/UpgradeCard.vue";
+import ClickUpgradeCard from "../components/ClickUpgradeCard.vue";
+import AutoUpgradeCard from "../components/AutoUpgradeCard.vue";
 import DollOptionCard from "../components/DollOptionCard.vue";
 import BoostCard from "../components/BoostCard.vue";
 import { dollService } from "../services/DollService.js";
@@ -126,7 +127,7 @@ export default {
             }
         };
     },
-    components: { DollImage, UpgradeCard, DollOptionCard, BoostCard }
+    components: { DollImage, ClickUpgradeCard, AutoUpgradeCard, DollOptionCard, BoostCard }
 }
 </script>
 
