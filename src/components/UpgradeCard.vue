@@ -1,5 +1,5 @@
 <template>
-  <div class="row rounded elevation-2 border border-dark bg-dark bg-gradient upgradeCard">
+  <div class="row rounded elevation-2 border border-dark bg-dark bg-gradient upgradeCard align-items-center">
     <div class="col-3 d-flex align-items-center justify-content-center g-0 h-100">
       <img :src="upgrade.img" :alt="upgrade.name" height="90" width="90">
     </div>
@@ -16,12 +16,15 @@
         {{ upgrade.description }}
       </span>
     </div>
-    <div class="col-3 g-0 d-flex align-items-center justify-content-center h-100">
+    <div class="col-3 g-0 d-flex flex-column align-items-center justify-content-center h-100">
       <button class="btn purchase-btn bg-gradient">
         <span>
           Purchase
         </span>
       </button>
+      <span class="hide">
+        {{ upgrade.price.toLocaleString('en-us') }} CP
+      </span>
     </div>
   </div>
 </template>
@@ -40,8 +43,10 @@ export default {
 
 
 <style lang="scss" scoped>
-  .upgradeCard{
-    height: 90px;
+  .hide{
+    color: transparent;
+    transition: 0.3s;
+    user-select: none;
   }
 
   .purchase-btn{
@@ -51,5 +56,9 @@ export default {
 
   .purchase-btn:hover{
     background-color: #8183d8;
+  }
+
+  .purchase-btn:hover + .hide{
+    color: white;
   }
 </style>

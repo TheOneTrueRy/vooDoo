@@ -21,7 +21,7 @@
               <div class="col-12 d-flex justify-content-center align-items-center py-2">
                 <img src="/CursePoints.png" alt="" height="75" class="">
                 <span class="fs-3">
-                  : <i class="ms-3">{{ cursePoints.toLocaleString('en-us') }}</i>
+                  : <i class="ms-3">{{ cursePoints.toLocaleString('en-us') }} Curse Points</i>
                 </span>
               </div>
               <div class="col-6 text-center pt-2 pb-3">
