@@ -11,7 +11,7 @@ export const AppState = reactive({
   clickUpgradesData: loadState('clickUpgrades', [Upgrade]),
   autoUpgradesData: loadState('autoUpgrades', [Upgrade]),
   dollData: loadState('doll', Doll),
-  cursePointsData: loadState('cursePointsData', Number),
+  cursePointsData: loadState('cursePoints', Number),
 
   /** @type {import('./models/Doll.js').Doll} */
   doll: {

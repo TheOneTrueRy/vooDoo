@@ -19,6 +19,7 @@ class LoadService{
       logger.log(AppState.doll, 'AppState.doll')
     }
     if(AppState.cursePointsData > 0){
+      logger.log(AppState.cursePointsData)
       AppState.cursePoints = AppState.cursePointsData
     }
   }

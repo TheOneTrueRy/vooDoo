@@ -17,21 +17,27 @@
             <DollImage/>
           </div>
           <div class="col-12 px-5 py-2">
-            <div class="row rounded border border-dark bg-light">
+            <div class="row rounded border">
               <div class="col-12 d-flex justify-content-center align-items-center py-2">
-                <img src="/CursePoints.png" alt="" height="80px">
+                <img src="/CursePoints.png" alt="" height="75" class="">
+                <span class="fs-3">
+                  : <i class="ms-3">{{ cursePoints.toLocaleString('en-us') }}</i>
+                </span>
+              </div>
+              <div class="col-6 text-center pt-2 pb-3">
                 <span class="fs-5">
-                  {{ cursePoints }}
+                  <i>
+                    {{ clickAmount.toLocaleString('en-us') }}
+                  </i>
+                  per click
                 </span>
               </div>
-              <div class="col-6 text-center py-2">
-                <span class="">
-                  {{ clickAmount }} per click
-                </span>
-              </div>
-              <div class="col-6 text-center py-2">
-                <span>
-                  
+              <div class="col-6 text-center pt-2 pb-3">
+                <span class="fs-5">
+                  <i>
+                    {{ autoAmount.toLocaleString('en-us') }}
+                  </i>
+                  every 3 seconds
                 </span>
               </div>
             </div>

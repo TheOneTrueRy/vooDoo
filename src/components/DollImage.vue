@@ -37,6 +37,7 @@ import { onMounted } from "vue";
 import { Doll } from "../models/Doll.js";
 import gasp from "gsap";
 import Pop from "../utils/Pop.js";
+import { curseService } from "../services/CurseService.js";
 
 export default {
   props: {
@@ -49,7 +50,7 @@ export default {
     return {
       stab(){
         try {
-          
+          curseService.stab()
         } catch (error) {
           Pop.error(error.message, 'Stabbing')
         }
@@ -61,13 +62,65 @@ export default {
 
 
 <style lang="scss" scoped>
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg) scale(0.95);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg) scale(0.95);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg) scale(0.95);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg) scale(0.95);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg) scale(0.95);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg) scale(0.95);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
   .doll{
     height: 60vh;
     user-select: none;
     -webkit-user-drag: none;
+    transition: 0.4s;
   }
 
   .doll:hover{
     cursor: url("/CursorPin.png"), auto;
+  }
+
+  .doll:active{
+    animation-name: shake;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
   }
 </style>
