@@ -1,5 +1,5 @@
 <template>
-  <div class="row rounded elevation-2 border border-dark bg-dark bg-gradient upgradeCard align-items-center">
+  <div class="row rounded elevation-2 border border-dark bg-dark bg-gradient upgradeCard align-items-center py-1">
     <div class="col-3 d-flex align-items-center justify-content-center g-0 h-100">
       <img :src="upgrade.img" :alt="upgrade.name" height="90" width="90">
     </div>

@@ -63,8 +63,8 @@ export const AppState = reactive({
   clickUpgrades: [
     {
       name: 'Thimble',
-      comment: 'That needle could be a little sharper',
-      description: 'Increases your click gain by 1.',
+      comment: 'That needle could be a little sharper...',
+      description: 'Increases your click gain by 1',
       img: '/Thimble.png',
       price: 50,
       value: 1,
@@ -72,10 +72,10 @@ export const AppState = reactive({
     },
     {
       name: 'Emery Bag',
-      comment: '',
-      description: '',
+      comment: 'Why not sharpen ALL the needles?!',
+      description: 'Increases your click gain by 5',
       img: '/Emery-Bag.png',
-      price: 0,
+      price: 500,
       value: 5,
       quantity: 0
     },
@@ -85,19 +85,19 @@ export const AppState = reactive({
     {
       name: 'Minor Misfortune',
       comment: `This'll make 'em salty.`,
-      description: '',
+      description: 'Increase your auto-payout by 2',
       img: '/Salt.png',
-      price: 0,
-      value: 0,
+      price: 150,
+      value: 2,
       quantity: 0
     },
     {
       name: 'Bad Luck Streak',
       comment: `They just can't catch a break...`,
-      description: '',
+      description: 'Increase your auto-payout by 6',
       img: '/BrokenMirror.png',
-      price: 0,
-      value: 0,
+      price: 600,
+      value: 6,
       quantity: 0
     },
   ],

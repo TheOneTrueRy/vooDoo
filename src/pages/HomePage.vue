@@ -27,7 +27,7 @@
               <div class="col-6 text-center pt-2 pb-3">
                 <span class="fs-5">
                   <i>
-                    {{ clickAmount.toLocaleString('en-us') }}
+                    {{ clickAmount.toLocaleString('en-us') }} CP
                   </i>
                   per click
                 </span>
@@ -35,7 +35,7 @@
               <div class="col-6 text-center pt-2 pb-3">
                 <span class="fs-5">
                   <i>
-                    {{ autoAmount.toLocaleString('en-us') }}
+                    {{ autoAmount.toLocaleString('en-us') }} CP
                   </i>
                   every 3 seconds
                 </span>
