@@ -29,6 +29,7 @@
   <img v-else-if="doll.kit == 'karen' && doll.color == 'green'" src="/GreenKaren.png" alt="Doll" class="doll" @click="stab()">
   <img v-else-if="doll.kit == 'karen' && doll.color == 'blue'" src="/BlueKaren.png" alt="Doll" class="doll" @click="stab()">
   <img v-else-if="doll.kit == 'karen' && doll.color == 'purple'" src="/PurpleKaren.png" alt="Doll" class="doll" @click="stab()">
+  <audio id="stabSound" src="/stab.wav"></audio>
 </template>
 
 
@@ -50,7 +51,9 @@ export default {
     return {
       stab(){
         try {
+          let stabSound = new Audio('/stab.wav')
           curseService.stab()
+          stabSound.play()
         } catch (error) {
           Pop.error(error.message, 'Stabbing')
         }
