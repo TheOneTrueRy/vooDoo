@@ -18,16 +18,21 @@
           </div>
           <div class="col-12 px-5 py-2">
             <div class="row rounded border border-dark bg-light">
-              <div class="col-12 d-flex justify-content-center py-2">
+              <div class="col-12 d-flex justify-content-center align-items-center py-2">
+                <img src="/CursePoints.png" alt="" height="80px">
                 <span class="fs-5">
                   {{ cursePoints }}
                 </span>
               </div>
               <div class="col-6 text-center py-2">
-                <span>{{ clickAmount }} per click</span>
+                <span class="">
+                  {{ clickAmount }} per click
+                </span>
               </div>
               <div class="col-6 text-center py-2">
-                <span></span>
+                <span>
+                  
+                </span>
               </div>
             </div>
           </div>
@@ -75,7 +80,6 @@ import gsap from "gsap";
 import { AppState } from "../AppState.js";
 import DollImage from "../components/DollImage.vue";
 import Pop from "../utils/Pop.js";
-import { loadService } from "../services/LoadService.js";
 import UpgradeCard from "../components/UpgradeCard.vue";
 import DollOptionCard from "../components/DollOptionCard.vue";
 import BoostCard from "../components/BoostCard.vue";
