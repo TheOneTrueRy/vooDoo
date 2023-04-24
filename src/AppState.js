@@ -187,10 +187,10 @@ export const AppState = reactive({
   },
   {
     name: `Bullied Blue`,
-    description: ``,
+    description: `Bruised and battered.`,
     img: `/BlueYarn.png`,
     silhouette: `/SilhouetteYarn.png`,
-    price: 0,
+    price: 1000,
     unlocked: false,
     equipped: false,
     colorCode: 'blue'
@@ -200,7 +200,7 @@ export const AppState = reactive({
     description: `Better than Gingivitis Green!`,
     img: `/GreenYarn.png`,
     silhouette: `/SilhouetteYarn.png`,
-    price: 0,
+    price: 4000,
     unlocked: false,
     equipped: false,
     colorCode: 'green'
@@ -210,17 +210,17 @@ export const AppState = reactive({
     description: `Like a bull in a clicker game.`,
     img: `/RedYarn.png`,
     silhouette: `/SilhouetteYarn.png`,
-    price: 0,
+    price: 6000,
     unlocked: false,
     equipped: false,
     colorCode: 'red'
   },
   {
     name: `Pulsing Purple`,
-    description: ``,
+    description: `Oooh, pretty!`,
     img: `/PurpleYarn.png`,
     silhouette: `/SilhouetteYarn.png`,
-    price: 0,
+    price: 10000,
     unlocked: false,
     equipped: false,
     colorCode: 'purple'
@@ -234,7 +234,7 @@ export const AppState = reactive({
 
   judgement: false,
   spite: false,
-  manipulation: true,
+  manipulation: false,
   recklessness: false,
   pettiness: false,
 
