@@ -38,7 +38,7 @@
           Equipped
         </span>
       </button>
-      <span class="hide">
+      <span class="hide" :class="[option.unlocked == true ? 'invisible' : '']">
         {{ option.price.toLocaleString('en-us') }} CP
       </span>
     </div>
@@ -104,5 +104,9 @@ export default {
 
   .purchase-btn:hover + .hide{
     color: white;
+  }
+
+  .invisible{
+    color: transparent !important;
   }
 </style>

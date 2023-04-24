@@ -7,5 +7,6 @@ export class DollColor{
     this.price = data.price
     this.unlocked = data.unlocked
     this.equipped = data.equipped
+    this.colorCode = data.colorCode
   }
 }

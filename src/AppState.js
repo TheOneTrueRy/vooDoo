@@ -197,7 +197,7 @@ export const AppState = reactive({
   },
   {
     name: `Ghoulish Green`,
-    description: ``,
+    description: `Better than Gingivitis Green!`,
     img: `/GreenYarn.png`,
     silhouette: `/SilhouetteYarn.png`,
     price: 0,
@@ -207,7 +207,7 @@ export const AppState = reactive({
   },
   {
     name: `Raging Red`,
-    description: ``,
+    description: `Like a bull in a clicker game.`,
     img: `/RedYarn.png`,
     silhouette: `/SilhouetteYarn.png`,
     price: 0,
