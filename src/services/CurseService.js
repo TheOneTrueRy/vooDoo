@@ -9,10 +9,30 @@ class CurseService{
     let randomRoll = Math.floor((Math.random() * 1000000) + 1)
     let clickamount = AppState.clickAmount
     AppState.cursePoints += clickamount
-    if(randomRoll <= 1000000 && randomRoll >= 995000 && AppState.spite == false){
+    if(randomRoll < 1000000 && randomRoll > 995000 && AppState.spite == false){
       AppState.spite = true
       saveState('spite', AppState.spite)
       Pop.toast('You just got a random drop of: Essence of Spite!', 'info', 'top')
+    }
+    if(randomRoll < 995000 && randomRoll > 990000 && AppState.judgement == false){
+      AppState.judgement = true
+      saveState('judgement', AppState.judgement)
+      Pop.toast('You just got a random drop of: Essence of Judgement!', 'info', 'top')
+    }
+    if(randomRoll < 990000 && randomRoll > 985000 && AppState.manipulation == false){
+      AppState.manipulation = true
+      saveState('manipulation', AppState.manipulation)
+      Pop.toast('You just got a random drop of: Essence of Manipulation!', 'info', 'top')
+    }
+    if(randomRoll < 985000 && randomRoll > 980000 && AppState.recklessness == false){
+      AppState.recklessness = true
+      saveState('recklessness', AppState.recklessness)
+      Pop.toast('You just got a random drop of: Essence of Recklessness!', 'info', 'top')
+    }
+    if(randomRoll < 980000 & randomRoll > 975000 && AppState.pettiness == false){
+      AppState.pettiness = true
+      saveState('pettiness', AppState.pettiness)
+      Pop.toast('You just got a random drop of: Essence of Pettiness!', 'info', 'top')
     }
     saveState('cursePoints', AppState.cursePoints)
   }
