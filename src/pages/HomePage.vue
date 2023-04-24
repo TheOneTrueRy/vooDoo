@@ -3,7 +3,7 @@
     <div class="row h-100">
       <div class="col-12 col-md-8">
         <div class="row">
-          <div class="col-12 text-center title">
+          <div class="col-12 text-center title g-0">
             <span>
               Who Do You VooDoo?
             </span>
@@ -16,7 +16,7 @@
           <div class="col-12 text-center g-0">
             <DollImage/>
           </div>
-          <div class="col-12 bg-dark px-5 py-2">
+          <div class="col-12 bg-dark px-4 pb-1">
             <div class="row rounded border">
               <div class="col-12 d-flex justify-content-center align-items-center py-2">
                 <img src="/CursePoints.png" alt="" height="75" class="">
@@ -43,6 +43,13 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="col-12 d-flex d-md-none align-items-center justify-content-center pb-1">
+        <span>
+          <i class="mdi mdi-chevron-down"></i>
+          SHOP
+          <i class="mdi mdi-chevron-down"></i>
+        </span>
       </div>
       <div class="col-12 col-md-4 vh-100 bg-dark border">
         <div class="row shop-top"> 
@@ -91,10 +98,18 @@ import AutoUpgradeCard from "../components/AutoUpgradeCard.vue";
 import DollOptionCard from "../components/DollOptionCard.vue";
 import BoostCard from "../components/BoostCard.vue";
 import { dollService } from "../services/DollService.js";
+import { curseService } from "../services/CurseService.js";
 
 export default {
     setup() {
       const dollName = ref(AppState.doll.name)
+      function payAuto(){
+        try {
+          curseService.payAuto()
+        } catch (error) {
+          Pop.error(error.message, 'Paying Auto')
+        }
+      }
         onMounted(() => {
             gsap.from(".row", {
                 duration: 3,
@@ -102,7 +117,7 @@ export default {
                 // scale: 0.4,
                 stagger: 0.3
             });
-
+            setInterval(payAuto, 3000)
         });
         return {
             doll: computed(() => AppState.doll),
@@ -137,11 +152,13 @@ export default {
     font-family: 'Zeyada', cursive;
     text-shadow: 0 4px 0 rgb(82, 13, 109);
     text-shadow: 0 0 4px white, 0 3px 0 rgb(64, 14, 87);
-    font-size: 5.5em;
+    font-size: 3.5em;
   }
 
-  .HUGE{
-    font-size: 4em;
+  @media screen and (min-width: 756px) {
+    .title{
+      font-size: 5.5em;
+    }
   }
 
   .my-select:hover{
