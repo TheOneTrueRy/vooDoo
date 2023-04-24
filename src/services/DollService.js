@@ -13,6 +13,9 @@ class DollService{
       Pop.error('No...')
       dollName = 'Name Your Doll!'
     }
+    if(dollName != 'Name Your Doll!'){
+      Pop.success('Doll Name successfully set!')
+    }
     AppState.doll.name = dollName
     saveState('doll', AppState.doll)
   }
