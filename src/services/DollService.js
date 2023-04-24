@@ -85,7 +85,7 @@ class DollService{
   purchaseDollColor(colorName){
     let colorIndex = AppState.dollColors.findIndex(c => c.name == colorName)
     let currentlyEquippedIndex = AppState.dollColors.findIndex(c => c.equipped == true)
-    if(AppState.cursePoints >= AppState.dollColors[colorIndex.price]){
+    if(AppState.cursePoints >= AppState.dollColors[colorIndex].price){
       AppState.dollColors[currentlyEquippedIndex].equipped = false
       AppState.dollColors[colorIndex].unlocked = true
       AppState.dollColors[colorIndex].equipped = true
