@@ -53,14 +53,14 @@
       </div>
       <div class="col-12 col-md-4 vh-100 bg-dark border">
         <div class="row shop-top align-items-end">
-          <div class="col-6 g-0">
-            <span class="fs-2">
+          <div class="col-6">
+            <span class="fs-1">
               <i id="music-btn" class="mdi mdi-music-note" v-if="music" @click="musicOff()"></i>
               <i id="music-btn" class="mdi mdi-music-note-off" v-else @click="musicOn()"></i>
             </span>
           </div>
-          <div class="col-6 g-0 text-end">
-            <span class="fs-2">
+          <div class="col-6 text-end">
+            <span class="fs-1">
               <i id="sound-btn" class="mdi mdi-volume-high" @click="toggleSound()" v-if="sound"></i>
               <i id="sound-btn" class="mdi mdi-volume-off" @click="toggleSound()" v-else></i>
               </span>
