@@ -7,5 +7,6 @@ export class DollKit{
     this.essence = data.essence
     this.unlocked = data.unlocked
     this.equipped = data.equipped
+    this.kitCode = data.kitCode
   }
 }

@@ -132,7 +132,7 @@ export const AppState = reactive({
       kitCode: 'devil'
     },
     {
-      name: `Tyrael`,
+      name: `Voodoo Virtue`,
       description: `Worship me.`,
       img: `/GreyAngel.png`,
       silhouette: `/SilhouetteAngel.png`,
@@ -142,7 +142,7 @@ export const AppState = reactive({
       kitCode: 'angel'
     },
     {
-      name: `Neko`,
+      name: `Discord Doll`,
       description: `UWU!`,
       img: `/GreyCat.png`,
       silhouette: `/SilhouetteCat.png`,
@@ -239,4 +239,6 @@ export const AppState = reactive({
   pettiness: false,
 
   displaying: 'doll',
+
+  sound: true
 })

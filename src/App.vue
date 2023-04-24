@@ -8,9 +8,6 @@
 import { onMounted } from "vue";
 import { loadService } from "./services/LoadService.js";
 import Pop from "./utils/Pop.js";
-import { logger } from "./utils/Logger.js";
-import { AppState } from "./AppState.js";
-
 
 export default {
   setup() {
