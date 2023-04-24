@@ -69,6 +69,7 @@ class DollService{
   }
 
   equipDollKit(kitName){
+    debugger
     let kitIndex = AppState.dollKits.findIndex(k => k.name == kitName)
     let currentlyEquippedIndex = AppState.dollKits.findIndex(k => k.equipped == true)
     if(AppState.dollKits[kitIndex].unlocked == true){

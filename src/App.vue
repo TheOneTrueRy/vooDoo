@@ -23,7 +23,6 @@ export default {
       }
     onMounted(() => {
       loadEverything()
-      logger.log(AppState.dollKits)
     })
     return {
     }

@@ -17,12 +17,9 @@ class LoadService{
       AppState.dollKits = AppState.dollKitsData
     }
     if(AppState.dollData.name != undefined){
-      logger.log(AppState.dollData, 'AppState.dollData')
       AppState.doll = AppState.dollData
-      logger.log(AppState.doll, 'AppState.doll')
     }
     if(AppState.cursePointsData > 0){
-      logger.log(AppState.cursePointsData)
       AppState.cursePoints = AppState.cursePointsData
     }
     // if(AppState.spiteData == 'T'){

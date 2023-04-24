@@ -132,7 +132,7 @@ export const AppState = reactive({
       kitCode: 'devil'
     },
     {
-      name: ``,
+      name: `Tyrael`,
       description: `Worship me.`,
       img: `/GreyAngel.png`,
       silhouette: `/SilhouetteAngel.png`,
@@ -142,7 +142,7 @@ export const AppState = reactive({
       kitCode: 'angel'
     },
     {
-      name: ``,
+      name: `Neko`,
       description: `UWU!`,
       img: `/GreyCat.png`,
       silhouette: `/SilhouetteCat.png`,
@@ -196,7 +196,7 @@ export const AppState = reactive({
     colorCode: 'blue'
   },
   {
-    name: `Growing Green`,
+    name: `Ghoulish Green`,
     description: ``,
     img: `/GreenYarn.png`,
     silhouette: `/SilhouetteYarn.png`,
