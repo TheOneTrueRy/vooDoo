@@ -28,9 +28,6 @@
           Purchase
         </span>
       </button>
-      <span class="hide">
-        {{ option.price.toLocaleString('en-us') }} CP
-      </span>
       <button v-if="option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient" @click="equipDollColor(option.name)">
         <span>
           Equip
@@ -41,6 +38,9 @@
           Equipped
         </span>
       </button>
+      <span class="hide">
+        {{ option.price.toLocaleString('en-us') }} CP
+      </span>
     </div>
   </div>
 </template>
