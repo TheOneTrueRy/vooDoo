@@ -2,22 +2,23 @@ import { reactive } from 'vue'
 import { loadState } from "./utils/Store.js"
 import { Doll } from "./models/Doll.js"
 import { Upgrade } from "./models/Upgrade.js"
-import { DollOption } from "./models/DollOption.js"
+import { DollKit } from "./models/DollKit.js"
+import { DollColor } from "./models/DollColor.js"
 
 // NOTE AppState is a reactive object to contain app level data
 export const AppState = reactive({
 
-  dollColorsData: loadState('dollColors', [DollOption]),
-  dollKitsData: loadState('dollKits', [DollOption]),
+  dollColorsData: loadState('dollColors', [DollColor]),
+  dollKitsData: loadState('dollKits', [DollKit]),
   clickUpgradesData: loadState('clickUpgrades', [Upgrade]),
   autoUpgradesData: loadState('autoUpgrades', [Upgrade]),
   dollData: loadState('doll', Doll),
   cursePointsData: loadState('cursePoints', Number),
-  spiteData: loadState('spite', Boolean),
-  judgementData: loadState('judgement', Boolean),
-  manipulationData: loadState('manipulation', Boolean),
-  recklessnessData: loadState('recklessness', Boolean),
-  pettinessData: loadState('pettiness', Boolean),
+  // spiteData: loadState('spite', String),
+  // judgementData: loadState('judgement', String),
+  // manipulationData: loadState('manipulation', String),
+  // recklessnessData: loadState('recklessness', String),
+  // pettinessData: loadState('pettiness', String),
 
   /** @type {import('./models/Doll.js').Doll} */
   doll: {
@@ -108,7 +109,7 @@ export const AppState = reactive({
     },
   ],
 
-  /** @type {import('./models/DollOption.js').DollOption[]} */
+  /** @type {import('./models/DollKit.js').DollOption[]} */
   dollKits: [
     {
       name: `Plain Ol' Doll`,

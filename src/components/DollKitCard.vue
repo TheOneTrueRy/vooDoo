@@ -47,14 +47,30 @@
 
 
 <script>
-import { DollOption } from "../models/DollOption.js";
+import { dollService } from "../services/DollService.js";
+import Pop from "../utils/Pop.js";
 
 export default {
   props: {
-    option: {type: DollOption, required: true}
+    option: {type: Object, required: true}
   },
   setup(){
-    return {}
+    return {
+      purchaseDollKit(kitName){
+        try {
+          dollService.purchaseDollKit(kitName)
+        } catch (error) {
+          Pop.error(error.message, 'Purchasing Doll Kit')
+        }
+      },
+      equipDollKit(kitName){
+        try {
+          dollService.equipDollKit(kitName)
+        } catch (error) {
+          Pop.error(error.message, 'Equipping Doll Kit')
+        }
+      }
+    }
   }
 }
 </script>

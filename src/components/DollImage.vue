@@ -35,14 +35,12 @@
 
 <script>
 import { onMounted } from "vue";
-import { Doll } from "../models/Doll.js";
-import gasp from "gsap";
 import Pop from "../utils/Pop.js";
 import { curseService } from "../services/CurseService.js";
 
 export default {
   props: {
-    doll: {type: Doll, required: true}
+    doll: {type: Object, required: true}
   },
   setup(){
     onMounted(() => {

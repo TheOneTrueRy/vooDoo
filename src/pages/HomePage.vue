@@ -14,7 +14,7 @@
             </form>
           </div>
           <div class="col-12 text-center g-0">
-            <DollImage/>
+            <DollImage :doll="doll"/>
           </div>
           <div class="col-12 bg-dark px-4">
             <div class="row rounded border">

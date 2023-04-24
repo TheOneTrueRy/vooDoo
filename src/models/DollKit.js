@@ -1,9 +1,10 @@
-export class DollOption{
+export class DollKit{
   constructor(data){
     this.name = data.name
     this.description = data.description
     this.img = data.img
-    this.price = data.price
+    this.silhouette = data.silhouette
+    this.essence = data.essence
     this.unlocked = data.unlocked
     this.equipped = data.equipped
   }
