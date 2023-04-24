@@ -16,7 +16,7 @@
           <div class="col-12 text-center g-0">
             <DollImage/>
           </div>
-          <div class="col-12 bg-dark px-4 pb-1">
+          <div class="col-12 bg-dark px-4">
             <div class="row rounded border">
               <div class="col-12 d-flex justify-content-center align-items-center py-2">
                 <img src="/CursePoints.png" alt="" height="75" class="">
@@ -44,8 +44,8 @@
           </div>
         </div>
       </div>
-      <div class="col-12 d-flex d-md-none align-items-center justify-content-center pb-1">
-        <span>
+      <div class="col-12 d-flex d-md-none align-items-center justify-content-center bg-dark pb-1">
+        <span class="fs-5">
           <i class="mdi mdi-chevron-down"></i>
           SHOP
           <i class="mdi mdi-chevron-down"></i>
@@ -78,8 +78,11 @@
           <div v-if="displaying == 'boost'" v-for="boost in boosts" class="col-12 px-3 py-2">
             <BoostCard :boost="boost"/>
           </div>
-          <div v-if="displaying == 'doll'" v-for="option in dollOptions" class="col-12 px-3 py-2">
-            <DollOptionCard :option="option"/>
+          <div v-if="displaying == 'doll'" v-for="kit in dollKits" class="col-12 px-3 py-2">
+            <DollKitCard :option="kit"/>
+          </div>
+          <div v-if="displaying == 'doll'" v-for="color in dollColors" class="col-12 px-3 py-2">
+            <DollColorCard :option="color"/>
           </div>
         </div>
       </div>
@@ -95,7 +98,6 @@ import DollImage from "../components/DollImage.vue";
 import Pop from "../utils/Pop.js";
 import ClickUpgradeCard from "../components/ClickUpgradeCard.vue";
 import AutoUpgradeCard from "../components/AutoUpgradeCard.vue";
-import DollOptionCard from "../components/DollOptionCard.vue";
 import BoostCard from "../components/BoostCard.vue";
 import { dollService } from "../services/DollService.js";
 import { curseService } from "../services/CurseService.js";
@@ -125,7 +127,8 @@ export default {
             clickUpgrades: computed(() => AppState.clickUpgrades),
             autoUpgrades: computed(() => AppState.autoUpgrades),
             boosts: computed(() => AppState.boosts),
-            dollOptions: computed(() => AppState.dollOptions),
+            dollKits: computed(() => AppState.dollKits),
+            dollColors: computed(() => AppState.dollColors),
             clickAmount: computed(() => AppState.clickAmount),
             autoAmount: computed(() => AppState.autoAmount),
             cursePoints: computed(() => AppState.cursePoints),
@@ -143,7 +146,7 @@ export default {
             }
         };
     },
-    components: { DollImage, ClickUpgradeCard, AutoUpgradeCard, DollOptionCard, BoostCard }
+    components: { DollImage, ClickUpgradeCard, AutoUpgradeCard, BoostCard }
 }
 </script>
 

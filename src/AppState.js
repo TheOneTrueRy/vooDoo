@@ -103,7 +103,7 @@ export const AppState = reactive({
   ],
 
   /** @type {import('./models/DollOption.js').DollOption[]} */
-  dollOptions: [
+  dollKits: [
     {
       name: `Plain Ol' Doll`,
       description: `I can take it!`,
@@ -164,57 +164,60 @@ export const AppState = reactive({
       equipped: false,
       kitCode: 'karen'
     },
-    {
-      name: `Ghastly Grey`,
-      description: `A Classic.`,
-      img: `/GreyYarn.png`,
-      silhouette: `/SilhouetteYarn.png`,
-      price: 0,
-      unlocked: true,
-      equipped: true,
-      colorCode: 'grey'
-    },
-    {
-      name: `Bullied Blue`,
-      description: ``,
-      img: `/BlueYarn.png`,
-      silhouette: `/SilhouetteYarn.png`,
-      price: 0,
-      unlocked: false,
-      equipped: false,
-      colorCode: 'blue'
-    },
-    {
-      name: `Growing Green`,
-      description: ``,
-      img: `/GreenYarn.png`,
-      silhouette: `/SilhouetteYarn.png`,
-      price: 0,
-      unlocked: false,
-      equipped: false,
-      colorCode: 'green'
-    },
-    {
-      name: `Raging Red`,
-      description: ``,
-      img: `/RedYarn.png`,
-      silhouette: `/SilhouetteYarn.png`,
-      price: 0,
-      unlocked: false,
-      equipped: false,
-      colorCode: 'red'
-    },
-    {
-      name: `Pulsing Purple`,
-      description: ``,
-      img: `/PurpleYarn.png`,
-      silhouette: `/SilhouetteYarn.png`,
-      price: 0,
-      unlocked: false,
-      equipped: false,
-      colorCode: 'purple'
-    }
+
   ],
+
+  dollColors: [ 
+  {
+    name: `Ghastly Grey`,
+    description: `A Classic.`,
+    img: `/GreyYarn.png`,
+    silhouette: `/SilhouetteYarn.png`,
+    price: 0,
+    unlocked: true,
+    equipped: true,
+    colorCode: 'grey'
+  },
+  {
+    name: `Bullied Blue`,
+    description: ``,
+    img: `/BlueYarn.png`,
+    silhouette: `/SilhouetteYarn.png`,
+    price: 0,
+    unlocked: false,
+    equipped: false,
+    colorCode: 'blue'
+  },
+  {
+    name: `Growing Green`,
+    description: ``,
+    img: `/GreenYarn.png`,
+    silhouette: `/SilhouetteYarn.png`,
+    price: 0,
+    unlocked: false,
+    equipped: false,
+    colorCode: 'green'
+  },
+  {
+    name: `Raging Red`,
+    description: ``,
+    img: `/RedYarn.png`,
+    silhouette: `/SilhouetteYarn.png`,
+    price: 0,
+    unlocked: false,
+    equipped: false,
+    colorCode: 'red'
+  },
+  {
+    name: `Pulsing Purple`,
+    description: ``,
+    img: `/PurpleYarn.png`,
+    silhouette: `/SilhouetteYarn.png`,
+    price: 0,
+    unlocked: false,
+    equipped: false,
+    colorCode: 'purple'
+  }],
 
   clickAmount: 1,
 

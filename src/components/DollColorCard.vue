@@ -23,18 +23,15 @@
       </span>
     </div>
     <div class="col-4 g-0 d-flex flex-column align-items-center justify-content-center h-100">
-      <button v-if="!option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient" @click="purchaseDollOption(option.name)">
+      <button v-if="!option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient" @click="purchaseDollColor(option.name)">
         <span>
           Purchase
         </span>
       </button>
-      <span v-if="option.essence" class="hide text-center">
-        Essence of {{ option.essence }}
-      </span>
-      <span v-if="option.price" class="hide">
+      <span class="hide">
         {{ option.price.toLocaleString('en-us') }} CP
       </span>
-      <button v-if="option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient" @click="equipDollOption(option.name)">
+      <button v-if="option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient" @click="equipDollColor(option.name)">
         <span>
           Equip
         </span>
