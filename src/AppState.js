@@ -13,6 +13,11 @@ export const AppState = reactive({
   autoUpgradesData: loadState('autoUpgrades', [Upgrade]),
   dollData: loadState('doll', Doll),
   cursePointsData: loadState('cursePoints', Number),
+  spiteData: loadState('spite', Boolean),
+  judgementData: loadState('judgement', Boolean),
+  manipulationData: loadState('manipulation', Boolean),
+  recklessnessData: loadState('recklessness', Boolean),
+  pettinessData: loadState('pettiness', Boolean),
 
   /** @type {import('./models/Doll.js').Doll} */
   doll: {

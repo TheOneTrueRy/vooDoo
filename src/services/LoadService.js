@@ -25,6 +25,21 @@ class LoadService{
       logger.log(AppState.cursePointsData)
       AppState.cursePoints = AppState.cursePointsData
     }
+    if(AppState.spiteData == true){
+      AppState.spite = true
+    }
+    if(AppState.judgementData == true){
+      AppState.judgement = true
+    }
+    if(AppState.manipulationData == true){
+      AppState.manipulation = true
+    }
+    if(AppState.recklessnessData == true){
+      AppState.recklessness = true
+    }
+    if(AppState.pettinessData == true){
+      AppState.pettiness = true
+    }
     AppState.clickUpgrades.forEach(u => {
       AppState.clickAmount += (u.value * u.quantity)
     })

@@ -76,6 +76,8 @@ class DollService{
       AppState.doll.kit = AppState.dollKits[kitIndex].kitCode
       saveState('dollKits', AppState.dollKits)
       saveState('doll', AppState.doll)
+    }else{
+      Pop.error(`You haven't unlocked that doll kit!`)
     }
   }
 
@@ -92,7 +94,7 @@ class DollService{
       saveState('dollColors', AppState.dollColors)
       saveState('doll', AppState.doll)
     }else{
-      Pop.error(`You don't have enough CP for that!`)
+      Pop.error(`You don't have enough Curse Points for that!`)
     }
   }
 
@@ -105,6 +107,8 @@ class DollService{
       AppState.doll.color = AppState.dollColors[colorIndex].colorCode
       saveState('dollColors', AppState.dollColors)
       saveState('doll', AppState.doll)
+    }else{
+      Pop.error(`You haven't unlocked that doll color!`)
     }
   }
 }
