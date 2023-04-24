@@ -14,7 +14,7 @@
             </form>
           </div>
           <div class="col-12 text-center g-0">
-            <DollImage :doll="doll"/>
+            <DollImage/>
           </div>
           <div class="col-12 bg-dark px-4">
             <div class="row rounded border">
@@ -122,7 +122,6 @@ export default {
             setInterval(payAuto, 3000)
         });
         return {
-            doll: computed(() => AppState.doll),
             displaying: computed(() => AppState.displaying),
             clickUpgrades: computed(() => AppState.clickUpgrades),
             autoUpgrades: computed(() => AppState.autoUpgrades),

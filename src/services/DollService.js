@@ -23,7 +23,7 @@ class DollService{
       AppState.doll.kit = AppState.dollKits[kitIndex].kitCode
       saveState('dollKits', AppState.dollKits)
       saveState('doll', AppState.doll)
-    }else{
+    }else if(AppState.dollKits[kitIndex].essence == 'Spite' && AppState.spite == false){
       Pop.error(`You're missing the Essence of Spite!`)
     }
     if(AppState.dollKits[kitIndex].essence == 'Judgement' && AppState.judgement == true){
@@ -33,7 +33,7 @@ class DollService{
       AppState.doll.kit = AppState.dollKits[kitIndex].kitCode
       saveState('dollKits', AppState.dollKits)
       saveState('doll', AppState.doll)
-    }else{
+    }else if(AppState.dollKits[kitIndex].essence == 'Judgement' && AppState.judgement == false){
       Pop.error(`You're missing the Essence of Judgement!`)
     }
     if(AppState.dollKits[kitIndex].essence == 'Manipulation' && AppState.manipulation == true){
@@ -43,7 +43,7 @@ class DollService{
       AppState.doll.kit = AppState.dollKits[kitIndex].kitCode
       saveState('dollKits', AppState.dollKits)
       saveState('doll', AppState.doll)
-    }else{
+    }else if(AppState.dollKits[kitIndex].essence == 'Manipulation' && AppState.manipulation == false){
       Pop.error(`You're missing the Essence of Manipulation!`)
     }
     if(AppState.dollKits[kitIndex].essence == 'Recklessness' && AppState.recklessness == true){
@@ -53,7 +53,7 @@ class DollService{
       AppState.doll.kit = AppState.dollKits[kitIndex].kitCode
       saveState('dollKits', AppState.dollKits)
       saveState('doll', AppState.doll)
-    }else{
+    }else if(AppState.dollKits[kitIndex].essence == 'Recklessness' && AppState.recklessness == false){
       Pop.error(`You're missing the Essence of Recklessness`)
     }
     if(AppState.dollKits[kitIndex].essence == 'Pettiness' && AppState.pettiness == true){
@@ -63,7 +63,7 @@ class DollService{
       AppState.doll.kit = AppState.dollKits[kitIndex].kitCode
       saveState('dollKits', AppState.dollKits)
       saveState('doll', AppState.doll)
-    }else{
+    }else if(AppState.dollKits[kitIndex].essence == 'Pettiness' && AppState.pettiness == false){
       Pop.error(`You're missing the Essence of Pettiness!`)
     }
   }
