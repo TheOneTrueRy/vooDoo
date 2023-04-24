@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid vh-100">
     <div class="row h-100">
-      <div class="col-8">
+      <div class="col-12 col-md-8">
         <div class="row">
           <div class="col-12 text-center title">
             <span>
@@ -13,10 +13,10 @@
               <input v-model="dollName" type="text" name="doll-name" id="doll-name" class="fs-1 text-center text-light border rounded">
             </form>
           </div>
-          <div class="col-12 text-center">
+          <div class="col-12 text-center g-0">
             <DollImage/>
           </div>
-          <div class="col-12 px-5 py-2">
+          <div class="col-12 bg-dark px-5 py-2">
             <div class="row rounded border">
               <div class="col-12 d-flex justify-content-center align-items-center py-2">
                 <img src="/CursePoints.png" alt="" height="75" class="">
@@ -44,7 +44,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4 vh-100 shop-bg border">
+      <div class="col-12 col-md-4 vh-100 bg-dark border">
         <div class="row shop-top"> 
         </div>
         <div class="row shop-mid px-1">
@@ -62,16 +62,16 @@
           </div>
         </div>
         <div class="row my-overflow">
-          <div v-if="displaying == 'click'" v-for="upgrade in clickUpgrades" class="col-12 px-4 py-2">
+          <div v-if="displaying == 'click'" v-for="upgrade in clickUpgrades" class="col-12 px-3 py-2">
             <ClickUpgradeCard :upgrade="upgrade"/>
           </div>
-          <div v-if="displaying == 'auto'" v-for="upgrade in autoUpgrades" class="col-12 px-4 py-2">
+          <div v-if="displaying == 'auto'" v-for="upgrade in autoUpgrades" class="col-12 px-3 py-2">
             <AutoUpgradeCard :upgrade="upgrade"/>
           </div>
-          <div v-if="displaying == 'boost'" v-for="boost in boosts" class="col-12 px-4 py-2">
+          <div v-if="displaying == 'boost'" v-for="boost in boosts" class="col-12 px-3 py-2">
             <BoostCard :boost="boost"/>
           </div>
-          <div v-if="displaying == 'doll'" v-for="option in dollOptions" class="col-12 px-4 py-2">
+          <div v-if="displaying == 'doll'" v-for="option in dollOptions" class="col-12 px-3 py-2">
             <DollOptionCard :option="option"/>
           </div>
         </div>
@@ -154,13 +154,11 @@ export default {
     border-bottom: 3px solid #a9395b !important;
   }
 
-  .shop-bg{
-    background-image: url("/Shop-BG.png");
-    background-size: cover;
-  }
-
   .shop-top{
     height: 27%;
+    background-image: url("/Shop-Top.png");
+    background-position: center;
+    background-size: cover;
   }
 
   .shop-mid{

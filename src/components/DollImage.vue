@@ -112,6 +112,7 @@ export default {
 }
   .doll{
     height: 60vh;
+    max-width: 100%;
     user-select: none;
     -webkit-user-drag: none;
     transition: 0.4s;
