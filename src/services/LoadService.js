@@ -10,8 +10,11 @@ class LoadService{
     if(AppState.autoUpgradesData.length > 0){
       AppState.autoUpgrades = AppState.autoUpgradesData
     }
-    if(AppState.dollOptionsData.length > 0){
-      AppState.dollOptions = AppState.dollOptionsData
+    if(AppState.dollColorsData.length > 0){
+      AppState.dollColors = AppState.dollColorsData
+    }
+    if(AppState.dollKitsData.length > 0){
+      AppState.dollKits = AppState.dollKitsData
     }
     if(AppState.dollData.name != undefined){
       logger.log(AppState.dollData, 'AppState.dollData')

@@ -7,7 +7,8 @@ import { DollOption } from "./models/DollOption.js"
 // NOTE AppState is a reactive object to contain app level data
 export const AppState = reactive({
 
-  dollOptionsData: loadState('dollOptions', [DollOption]),
+  dollColorsData: loadState('dollColors', [DollOption]),
+  dollKitsData: loadState('dollKits', [DollOption]),
   clickUpgradesData: loadState('clickUpgrades', [Upgrade]),
   autoUpgradesData: loadState('autoUpgrades', [Upgrade]),
   dollData: loadState('doll', Doll),
