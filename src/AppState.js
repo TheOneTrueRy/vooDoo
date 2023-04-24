@@ -112,6 +112,7 @@ export const AppState = reactive({
       essence: '',
       unlocked: true,
       equipped: true,
+      kitCode: 'default'
     },
     {
       name: `Dolldevil`,
@@ -121,6 +122,7 @@ export const AppState = reactive({
       essence: 'Spite',
       unlocked: false,
       equipped: false,
+      kitCode: 'devil'
     },
     {
       name: ``,
@@ -130,6 +132,7 @@ export const AppState = reactive({
       essence: 'Judgement',
       unlocked: false,
       equipped: false,
+      kitCode: 'angel'
     },
     {
       name: ``,
@@ -139,6 +142,7 @@ export const AppState = reactive({
       essence: 'Manipulation',
       unlocked: false,
       equipped: false,
+      kitCode: 'cat'
     },
     {
       name: `BOB`,
@@ -148,6 +152,7 @@ export const AppState = reactive({
       essence: 'Recklessness',
       unlocked: false,
       equipped: false,
+      kitCode: 'bob'
     },
     {
       name: `Karen`,
@@ -157,6 +162,7 @@ export const AppState = reactive({
       essence: 'Pettiness',
       unlocked: false,
       equipped: false,
+      kitCode: 'karen'
     },
     {
       name: `Ghastly Grey`,
@@ -166,6 +172,7 @@ export const AppState = reactive({
       price: 0,
       unlocked: true,
       equipped: true,
+      colorCode: 'grey'
     },
     {
       name: `Bullied Blue`,
@@ -175,6 +182,7 @@ export const AppState = reactive({
       price: 0,
       unlocked: false,
       equipped: false,
+      colorCode: 'blue'
     },
     {
       name: `Growing Green`,
@@ -184,6 +192,7 @@ export const AppState = reactive({
       price: 0,
       unlocked: false,
       equipped: false,
+      colorCode: 'green'
     },
     {
       name: `Raging Red`,
@@ -193,6 +202,7 @@ export const AppState = reactive({
       price: 0,
       unlocked: false,
       equipped: false,
+      colorCode: 'red'
     },
     {
       name: `Pulsing Purple`,
@@ -202,6 +212,7 @@ export const AppState = reactive({
       price: 0,
       unlocked: false,
       equipped: false,
+      colorCode: 'purple'
     }
   ],
 

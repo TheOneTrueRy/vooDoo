@@ -34,7 +34,7 @@
       <span v-if="option.price" class="hide">
         {{ option.price.toLocaleString('en-us') }} CP
       </span>
-      <button v-if="option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient">
+      <button v-if="option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient" @click="equipDollOption(option.name)">
         <span>
           Equip
         </span>
