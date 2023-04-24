@@ -160,6 +160,7 @@ export default {
               try {
                 let dollNameData = dollName.value
                 dollService.updateName(dollNameData)
+                dollName.value = AppState.doll.name
               } catch (error) {
                 Pop.error(error.message, 'Updating Name')
               }

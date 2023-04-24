@@ -9,6 +9,10 @@ class DollService{
     if(dollName == ''){
       dollName = 'Name Your Doll!'
     }
+    if(dollName == 'Jeff'){
+      Pop.error('No...')
+      dollName = 'Name Your Doll!'
+    }
     AppState.doll.name = dollName
     saveState('doll', AppState.doll)
   }
