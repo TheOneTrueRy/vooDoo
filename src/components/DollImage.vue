@@ -49,7 +49,9 @@ export default {
         try {
           let stabSound = new Audio('/stab.wav')
           curseService.stab()
-          stabSound.play()
+          if(AppState.sound == true){
+            stabSound.play()
+          }
         } catch (error) {
           Pop.error(error.message, 'Stabbing')
         }

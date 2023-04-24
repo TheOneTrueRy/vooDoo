@@ -3,8 +3,8 @@
     <div class="row h-100">
       <div class="col-12 col-md-8">
         <div class="row">
-          <div class="col-12 text-center title g-0">
-            <span>
+          <div class="col-12 text-center g-0">
+            <span class="title">
               Who Do You VooDoo?
             </span>
           </div>
@@ -52,7 +52,13 @@
         </span>
       </div>
       <div class="col-12 col-md-4 vh-100 bg-dark border">
-        <div class="row shop-top"> 
+        <div class="row shop-top align-items-end">
+          <span class="fs-2 text-end" v-if="sound">
+              <i id="sound-btn" class="mdi mdi-volume-high" @click="toggleSound()"></i>
+            </span>
+            <span class="fs-2 text-end" v-else>
+              <i id="sound-btn" class="mdi mdi-volume-off" @click="toggleSound()"></i>
+            </span>
         </div>
         <div class="row shop-mid px-1">
           <div class="col-3 g-0 text-center bg-dark bg-gradient py-2 border border-dark my-select" :class="[displaying == 'doll' ? 'selected' : '']" @click="changeDisplaying('doll')">
@@ -131,6 +137,7 @@ export default {
             clickAmount: computed(() => AppState.clickAmount),
             autoAmount: computed(() => AppState.autoAmount),
             cursePoints: computed(() => AppState.cursePoints),
+            sound: computed(() => AppState.sound),
             dollName,
             changeDisplaying(string){
               try {
@@ -140,8 +147,19 @@ export default {
               }
             },
             updateName(){
-              let dollNameData = dollName.value
-              dollService.updateName(dollNameData)
+              try {
+                let dollNameData = dollName.value
+                dollService.updateName(dollNameData)
+              } catch (error) {
+                Pop.error(error.message, 'Updating Name')
+              }
+            },
+            toggleSound(){
+              try {
+                AppState.sound = !AppState.sound
+              } catch (error) {
+                Pop.error(error.message, 'Toggling Sound')
+              }
             }
         };
     },
@@ -196,5 +214,9 @@ export default {
   input{
     background-color: transparent;
     border: none;
+  }
+
+  #sound-btn{
+    cursor: pointer;
   }
 </style>
