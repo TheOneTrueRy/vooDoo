@@ -96,10 +96,11 @@ export default {
     setup() {
       const dollName = ref(AppState.doll.name)
         onMounted(() => {
-            gsap.from(".title", {
+            gsap.from(".row", {
                 duration: 3,
                 opacity: 0,
-                scale: 0.4
+                // scale: 0.4,
+                stagger: 0.3
             });
 
         });
