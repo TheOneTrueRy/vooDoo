@@ -4,7 +4,7 @@
       <img v-if="option.unlocked" :src="option.img" :alt="option.name" height="120" width="100">
       <img v-else-if="!option.unlocked" :src="option.silhouette" :alt="option.name" height="120" width="100">
     </div>
-    <div class="col-5 d-flex flex-column h-100 ps-0">
+    <div class="col-5 d-flex flex-column h-100 g-0">
       <span v-if="option.unlocked" class="fs-5">
         {{ option.name }}
       </span>

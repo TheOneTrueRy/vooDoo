@@ -3,7 +3,7 @@
     <div class="col-3 d-flex align-items-center justify-content-center g-0 h-100">
       <img :src="upgrade.img" :alt="upgrade.name" height="90" width="90">
     </div>
-    <div class="col-5 ps-0 d-flex flex-column h-100">
+    <div class="col-5 g-0 d-flex flex-column h-100">
       <span class="fs-5">
         {{ upgrade.name }}
       </span>
