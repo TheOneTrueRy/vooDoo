@@ -175,6 +175,7 @@ export default {
               try {
                 AppState.music = true
                 let bgMusic = document.getElementById("bg-music")
+                bgMusic.loop = true
                 bgMusic.play()
               } catch (error) {
                 Pop.error(error.message, 'Turning Music On')
