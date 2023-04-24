@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js"
+import Pop from "../utils/Pop.js"
 import { saveState } from "../utils/Store.js"
 
 
@@ -14,11 +15,68 @@ class DollService{
   purchaseDollKit(kitName){
     let kitIndex = AppState.dollKits.findIndex(k => k.name == kitName)
     let currentlyEquippedIndex = AppState.dollKits.findIndex(k => k.equipped == true)
-
+    if(AppState.dollKits[kitIndex].essence == 'Spite' && AppState.spite == true){
+      AppState.dollKits[currentlyEquippedIndex].equipped = false
+      AppState.dollKits[kitIndex].unlocked = true
+      AppState.dollKits[kitIndex].equipped = true
+      AppState.doll.kit = AppState.dollKits[kitIndex].kitCode
+      saveState('dollKits', AppState.dollKits)
+      saveState('doll', AppState.doll)
+    }else{
+      Pop.error(`You're missing the Essence of Spite!`)
+    }
+    if(AppState.dollKits[kitIndex].essence == 'Judgement' && AppState.judgement == true){
+      AppState.dollKits[currentlyEquippedIndex].equipped = false
+      AppState.dollKits[kitIndex].unlocked = true
+      AppState.dollKits[kitIndex].equipped = true
+      AppState.doll.kit = AppState.dollKits[kitIndex].kitCode
+      saveState('dollKits', AppState.dollKits)
+      saveState('doll', AppState.doll)
+    }else{
+      Pop.error(`You're missing the Essence of Judgement!`)
+    }
+    if(AppState.dollKits[kitIndex].essence == 'Manipulation' && AppState.manipulation == true){
+      AppState.dollKits[currentlyEquippedIndex].equipped = false
+      AppState.dollKits[kitIndex].unlocked = true
+      AppState.dollKits[kitIndex].equipped = true
+      AppState.doll.kit = AppState.dollKits[kitIndex].kitCode
+      saveState('dollKits', AppState.dollKits)
+      saveState('doll', AppState.doll)
+    }else{
+      Pop.error(`You're missing the Essence of Manipulation!`)
+    }
+    if(AppState.dollKits[kitIndex].essence == 'Recklessness' && AppState.recklessness == true){
+      AppState.dollKits[currentlyEquippedIndex].equipped = false
+      AppState.dollKits[kitIndex].unlocked = true
+      AppState.dollKits[kitIndex].equipped = true
+      AppState.doll.kit = AppState.dollKits[kitIndex].kitCode
+      saveState('dollKits', AppState.dollKits)
+      saveState('doll', AppState.doll)
+    }else{
+      Pop.error(`You're missing the Essence of Recklessness`)
+    }
+    if(AppState.dollKits[kitIndex].essence == 'Pettiness' && AppState.pettiness == true){
+      AppState.dollKits[currentlyEquippedIndex].equipped = false
+      AppState.dollKits[kitIndex].unlocked = true
+      AppState.dollKits[kitIndex].equipped = true
+      AppState.doll.kit = AppState.dollKits[kitIndex].kitCode
+      saveState('dollKits', AppState.dollKits)
+      saveState('doll', AppState.doll)
+    }else{
+      Pop.error(`You're missing the Essence of Pettiness!`)
+    }
   }
 
   equipDollKit(kitName){
-
+    let kitIndex = AppState.dollKits.findIndex(k => k.name == kitName)
+    let currentlyEquippedIndex = AppState.dollKits.findIndex(k => k.equipped == true)
+    if(AppState.dollKits[kitIndex].unlocked == true){
+      AppState.dollKits[currentlyEquippedIndex].equipped = false
+      AppState.dollKits[kitIndex].equipped = true
+      AppState.doll.kit = AppState.dollKits[kitIndex].kitCode
+      saveState('dollKits', AppState.dollKits)
+      saveState('doll', AppState.doll)
+    }
   }
 
   purchaseDollColor(colorName){
@@ -33,11 +91,21 @@ class DollService{
       saveState('cursePoints', AppState.cursePoints)
       saveState('dollColors', AppState.dollColors)
       saveState('doll', AppState.doll)
+    }else{
+      Pop.error(`You don't have enough CP for that!`)
     }
   }
 
   equipDollColor(colorName){
-    
+    let colorIndex = AppState.dollColors.findIndex(c => c.name == colorName)
+    let currentlyEquippedIndex = AppState.dollColors.findIndex(c => c.equipped == true)
+    if(AppState.dollColors[colorIndex].unlocked == true){
+      AppState.dollColors[currentlyEquippedIndex].equipped = false
+      AppState.dollColors[colorIndex].equipped = true
+      AppState.doll.color = AppState.dollColors[colorIndex].colorCode
+      saveState('dollColors', AppState.dollColors)
+      saveState('doll', AppState.doll)
+    }
   }
 }
 
