@@ -116,7 +116,7 @@ export const AppState = reactive({
       description: `I can take it!`,
       img: `/GreyDefault.png`,
       silhouette: ``,
-      essence: '',
+      essence: 'Jeff',
       unlocked: true,
       equipped: true,
       kitCode: 'default'
@@ -234,7 +234,7 @@ export const AppState = reactive({
 
   judgement: false,
   spite: false,
-  manipulation: false,
+  manipulation: true,
   recklessness: false,
   pettiness: false,
 

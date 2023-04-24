@@ -23,17 +23,14 @@
       </span>
     </div>
     <div class="col-4 g-0 d-flex flex-column align-items-center justify-content-center h-100">
-      <button v-if="!option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient" @click="purchaseDollKit(option.name)">
+      <button v-if="!option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient" @click="purchaseDollKit(option.name)" :class="[option.essence == 'Spite' && spite || option.essence == 'Judgement' && judgement || option.essence == 'Manipulation' && manipulation || option.essence == 'Recklessness' && recklessness || option.essence == 'Pettiness' && pettiness ? 'essence' : '']">
         <span>
           Purchase
         </span>
       </button>
-      <span v-if="option.essence" class="hide text-center">
-        Essence of {{ option.essence }}
-      </span>
       <button v-if="option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient" @click="equipDollKit(option.name)">
         <span>
-          Equip
+        Equip
         </span>
       </button>
       <button v-if="option.unlocked && option.equipped" class="btn purchase-btn bg-gradient" disabled>
@@ -41,14 +38,19 @@
           Equipped
         </span>
       </button>
+      <span v-if="option.essence || option.kitCode == 'default'" class="hide text-center" :class="[option.unlocked == true ? 'invisible' : '']">
+        Essence of {{ option.essence }}
+      </span>
     </div>
   </div>
 </template>
 
 
 <script>
+import { computed } from "@vue/reactivity";
 import { dollService } from "../services/DollService.js";
 import Pop from "../utils/Pop.js";
+import { AppState } from "../AppState.js";
 
 export default {
   props: {
@@ -69,7 +71,12 @@ export default {
         } catch (error) {
           Pop.error(error.message, 'Equipping Doll Kit')
         }
-      }
+      },
+      spite: computed(() => AppState.spite),
+      judgement: computed(() => AppState.judgement),
+      manipulation: computed(() => AppState.manipulation),
+      recklessness: computed(() => AppState.recklessness),
+      pettiness: computed(() => AppState.pettiness),
     }
   }
 }
@@ -77,8 +84,13 @@ export default {
 
 
 <style lang="scss" scoped>
-  .upgradeCard{
-    height: 140px;
+
+  @keyframes essence {
+    0% {color: rgb(86, 199, 152)}
+    20% {color: rgb(58, 188, 197)}
+    50% {color: rgb(32, 32, 219)}
+    85% {color: rgb(94, 22, 175)}
+    100% {color: rgb(86, 199, 152)}
   }
 
   .hide{
@@ -104,5 +116,13 @@ export default {
 
   .purchase-btn:hover + .hide{
     color: white;
+  }
+
+  .essence{
+    animation: essence 2s infinite;
+  }
+
+  .invisible{
+    color: transparent !important;
   }
 </style>
