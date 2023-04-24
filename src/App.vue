@@ -11,6 +11,7 @@ import Pop from "./utils/Pop.js";
 
 export default {
   setup() {
+    let bgMusic = new Audio('/bg-music.wav')
     function loadEverything(){
         try {
           loadService.loadEverything()

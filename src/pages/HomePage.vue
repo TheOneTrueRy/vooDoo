@@ -53,12 +53,18 @@
       </div>
       <div class="col-12 col-md-4 vh-100 bg-dark border">
         <div class="row shop-top align-items-end">
-          <span class="fs-2 text-end" v-if="sound">
-              <i id="sound-btn" class="mdi mdi-volume-high" @click="toggleSound()"></i>
+          <div class="col-6 g-0">
+            <span class="fs-2">
+              <i id="music-btn" class="mdi mdi-music-note" v-if="music" @click="musicOff()"></i>
+              <i id="music-btn" class="mdi mdi-music-note-off" v-else @click="musicOn()"></i>
             </span>
-            <span class="fs-2 text-end" v-else>
-              <i id="sound-btn" class="mdi mdi-volume-off" @click="toggleSound()"></i>
-            </span>
+          </div>
+          <div class="col-6 g-0 text-end">
+            <span class="fs-2">
+              <i id="sound-btn" class="mdi mdi-volume-high" @click="toggleSound()" v-if="sound"></i>
+              <i id="sound-btn" class="mdi mdi-volume-off" @click="toggleSound()" v-else></i>
+              </span>
+          </div>
         </div>
         <div class="row shop-mid px-1">
           <div class="col-3 g-0 text-center bg-dark bg-gradient py-2 border border-dark my-select" :class="[displaying == 'doll' ? 'selected' : '']" @click="changeDisplaying('doll')">
@@ -94,6 +100,9 @@
       </div>
     </div>
   </div>
+  <audio id="bg-music">
+    <source src="/bg-music.wav" type="audio/wav">
+  </audio>
 </template>
 
 <script>
@@ -138,6 +147,7 @@ export default {
             autoAmount: computed(() => AppState.autoAmount),
             cursePoints: computed(() => AppState.cursePoints),
             sound: computed(() => AppState.sound),
+            music: computed(() => AppState.music),
             dollName,
             changeDisplaying(string){
               try {
@@ -159,6 +169,24 @@ export default {
                 AppState.sound = !AppState.sound
               } catch (error) {
                 Pop.error(error.message, 'Toggling Sound')
+              }
+            },
+            musicOn(){
+              try {
+                AppState.music = true
+                let bgMusic = document.getElementById("bg-music")
+                bgMusic.play()
+              } catch (error) {
+                Pop.error(error.message, 'Turning Music On')
+              }
+            },
+            musicOff(){
+              try {
+                AppState.music = false
+                let bgMusic = document.getElementById("bg-music")
+                bgMusic.pause()
+              } catch (error) {
+                Pop.error(error.message, 'Turning Music Off')
               }
             }
         };
@@ -217,6 +245,10 @@ export default {
   }
 
   #sound-btn{
+    cursor: pointer;
+  }
+
+  #music-btn{
     cursor: pointer;
   }
 </style>

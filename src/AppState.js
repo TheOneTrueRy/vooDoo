@@ -240,5 +240,6 @@ export const AppState = reactive({
 
   displaying: 'doll',
 
-  sound: true
+  sound: true,
+  music: false
 })
