@@ -3,8 +3,8 @@
     <div class="row h-100">
       <div class="col-12 col-md-8">
         <div class="row">
-          <div class="col-12 text-center g-0">
-            <span class="title">
+          <div class="col-12 text-center g-0 title">
+            <span>
               Who Do You VooDoo?
             </span>
           </div>
@@ -131,8 +131,11 @@ export default {
             gsap.from(".row", {
                 duration: 3,
                 opacity: 0,
-                // scale: 0.4,
                 stagger: 0.3
+            });
+            gsap.from(".title", {
+              duration: 3,
+              scale: 0.2
             });
             setInterval(payAuto, 3000)
         });
