@@ -22,6 +22,9 @@ class LoadService{
     if(AppState.cursePointsData > 0){
       AppState.cursePoints = AppState.cursePointsData
     }
+    if(AppState.totalStabsData > 0){
+      AppState.totalStabs = AppState.totalStabsData
+    }
     // if(AppState.spiteData == 'T'){
     //   AppState.spite = true
     // }
