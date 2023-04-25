@@ -14,6 +14,7 @@ export const AppState = reactive({
   autoUpgradesData: loadState('autoUpgrades', [Upgrade]),
   dollData: loadState('doll', Doll),
   cursePointsData: loadState('cursePoints', Number),
+  totalStabsData: loadState('totalStabs', Number),
   // spiteData: loadState('spite', String),
   // judgementData: loadState('judgement', String),
   // manipulationData: loadState('manipulation', String),
@@ -231,6 +232,8 @@ export const AppState = reactive({
   autoAmount: 0,
 
   cursePoints: 0,
+
+  totalStabs: 0,
 
   judgement: false,
   spite: false,
