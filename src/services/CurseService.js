@@ -11,48 +11,48 @@ class CurseService{
     AppState.cursePoints += clickamount
     AppState.totalStabs++
     if(AppState.totalStabs == 1){
-      Pop.toast('Achievement Unlocked: "Just a little prick..."', 'success', 'top', 6000, true)
+      Pop.toast('Achievement Unlocked: "Just a little prick..."', 'success', 'top', 5000, true)
     }
     if(AppState.totalStabs == 37){
-      Pop.toast('Achievement Unlocked: "CAAAARL, THAT KILLS PEOPLE!"', 'success', 'top', 6000, true)
+      Pop.toast('Achievement Unlocked: "CAAAARL, THAT KILLS PEOPLE!"', 'success', 'top', 5000, true)
     }
     if(AppState.totalStabs == 100){
-      Pop.toast('Achievement Unlocked: "Did you name your doll Caesar?"', 'success', 'top', 6000, true)
+      Pop.toast('Achievement Unlocked: "Did you name your doll Caesar?"', 'success', 'top', 5000, true)
     }
-    if(AppState.totalStabs == 200){
-      Pop.toast(`Achievement Unlocked: "That's a lot of @#$%ing cursing!"`, 'success', 'top', 6000, true)
+    if(AppState.totalStabs == 250){
+      Pop.toast(`Achievement Unlocked: "That's a lot of @#$%ing cursing!"`, 'success', 'top', 5000, true)
     }
-    if(AppState.totalStabs == 400){
-      Pop.toast('Achievement Unlocked: "Oh happy needle, this is thy sheathe..."', 'success', 'top', 6000, true)
+    if(AppState.totalStabs == 450){
+      Pop.toast('Achievement Unlocked: "Oh happy needle, this is thy sheathe..."', 'success', 'top', 5000, true)
     }
-    if(AppState.totalStabs == 650){
-      Pop.toast(`Achievement Unlocked: "YEAH, STICK IT TO 'EM!"`, 'success', 'top', 6000, true)
+    if(AppState.totalStabs == 700){
+      Pop.toast(`Achievement Unlocked: "YEAH, STICK IT TO 'EM!"`, 'success', 'top', 5000, true)
     }
-    if(AppState.totalStabs == 950){
-      Pop.toast('Achievement Unlocked: "What are you gonna do, stab me?"', 'success', 'top', 6000, true)
-    }
-    if(AppState.totalStabs == 1250){
-      Pop.toast(`Achievement Unlocked: "Wow, you're still going huh?"`, 'success', 'top', 6000, true)
+    if(AppState.totalStabs == 1000){
+      Pop.toast('Achievement Unlocked: "What are you gonna do, stab me?"', 'success', 'top', 5000, true)
     }
     if(AppState.totalStabs == 1500){
-      Pop.toast(`Achievement Unlocked: "You know, you're the only person in my life who has ever stuck around..."`, 'success', 'top', 6000, true)
-    }
-    if(AppState.totalStabs == 1750){
-      Pop.toast(`Achievement Unlocked: "Did you catch my last pun? STUCK around? Haha..."`, 'success', 'top', 6000, true)
+      Pop.toast(`Achievement Unlocked: "Wow, you're still going huh?"`, 'success', 'top', 5000, true)
     }
     if(AppState.totalStabs == 2000){
-      Pop.toast(`Achievement Unlocked: "Do you still think I'm funny? I'm pretty insecure about my jokes."`, 'success', 'top', 6000, true)
-    }
-    if(AppState.totalStabs == 2250){
-      Pop.toast(`Achievement Unlocked: "You're lonely too, huh?"`, 'success', 'top', 6000, true)
+      Pop.toast(`Achievement Unlocked: "You know, you're the only person in my life who has ever stuck around..."`, 'success', 'top', 5000, true)
     }
     if(AppState.totalStabs == 2500){
+      Pop.toast(`Achievement Unlocked: "Did you catch my last pun? STUCK around? Haha..."`, 'success', 'top', 5000, true)
+    }
+    if(AppState.totalStabs == 3000){
+      Pop.toast(`Achievement Unlocked: "Do you still think I'm funny? I'm pretty insecure about my jokes."`, 'success', 'top', 5000, true)
+    }
+    if(AppState.totalStabs == 3500){
+      Pop.toast(`Achievement Unlocked: "You're lonely too, huh?"`, 'success', 'top', 5000, true)
+    }
+    if(AppState.totalStabs == 4000){
       Pop.toast(`Achievement Unlocked: "My name is Jeff by the way."`, 'success', 'top', 10000, true)
     }
-    if(AppState.totalStabs == 2600){
+    if(AppState.totalStabs == 4200){
       Pop.toast(`Achievement Unlocked: "My programmer is getting tired..."`, 'success', 'top', 10000, true)
     }
-    if(AppState.totalStabs == 2650){
+    if(AppState.totalStabs == 4250){
       Pop.toast(`Achievement Unlocked: "I'll miss you... thank you for playing. :)"`, 'success', 'top', 10000, true)
     }
     if(randomRoll < 1000000 && randomRoll > 999900 && AppState.spite == false){
