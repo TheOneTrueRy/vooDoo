@@ -32,6 +32,9 @@
                   <i v-else-if="!boosts[1].active && boosts[3].active">
                     {{ clickAmount.toLocaleString('en-us') * 4 }} CP
                   </i>
+                  <i v-else-if="boosts[1].active && boosts[3].active">
+                    {{ clickAmount.toLocaleString('en-us') * 5 }} CP
+                  </i>
                   <i v-else-if="!boosts[1].active && !boosts[3].active">
                     {{ clickAmount.toLocaleString('en-us') }} CP
                   </i>

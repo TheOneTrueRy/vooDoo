@@ -60,27 +60,27 @@ class CurseService{
     if(AppState.totalStabs == 4300){
       Pop.toast(`Achievement Unlocked: "I'll miss you... thank you for playing. :)"`, 'success', 'top', 10000, true)
     }
-    if(randomRoll < 1000000 && randomRoll > 999900 && AppState.spite == false){
+    if(randomRoll < 1000000 && randomRoll > 999800 && AppState.spite == false){
       AppState.spite = true
       saveState('spite', true)
       Pop.toast('You just got a random drop of: Essence of Spite!', 'info', 'top')
     }
-    if(randomRoll < 999900 && randomRoll > 999800 && AppState.judgement == false){
+    if(randomRoll < 999800 && randomRoll > 999600 && AppState.judgement == false){
       AppState.judgement = true
       saveState('judgement', true)
       Pop.toast('You just got a random drop of: Essence of Judgement!', 'info', 'top')
     }
-    if(randomRoll < 999800 && randomRoll > 999700 && AppState.manipulation == false){
+    if(randomRoll < 999600 && randomRoll > 999400 && AppState.manipulation == false){
       AppState.manipulation = true
       saveState('manipulation', true)
       Pop.toast('You just got a random drop of: Essence of Manipulation!', 'info', 'top')
     }
-    if(randomRoll < 999700 && randomRoll > 999600 && AppState.recklessness == false){
+    if(randomRoll < 999400 && randomRoll > 999200 && AppState.recklessness == false){
       AppState.recklessness = true
       saveState('recklessness', true)
       Pop.toast('You just got a random drop of: Essence of Recklessness!', 'info', 'top')
     }
-    if(randomRoll < 999600 & randomRoll > 999500 && AppState.pettiness == false){
+    if(randomRoll < 999200 & randomRoll > 999000 && AppState.pettiness == false){
       AppState.pettiness = true
       saveState('pettiness', true)
       Pop.toast('You just got a random drop of: Essence of Pettiness!', 'info', 'top')
