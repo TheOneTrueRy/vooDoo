@@ -12,14 +12,10 @@ export const AppState = reactive({
   dollKitsData: loadState('dollKits', [DollKit]),
   clickUpgradesData: loadState('clickUpgrades', [Upgrade]),
   autoUpgradesData: loadState('autoUpgrades', [Upgrade]),
+  boostsData: loadState('boosts', []),
   dollData: loadState('doll', Doll),
   cursePointsData: loadState('cursePoints', Number),
   totalStabsData: loadState('totalStabs', Number),
-  // spiteData: loadState('spite', String),
-  // judgementData: loadState('judgement', String),
-  // manipulationData: loadState('manipulation', String),
-  // recklessnessData: loadState('recklessness', String),
-  // pettinessData: loadState('pettiness', String),
 
   /** @type {import('./models/Doll.js').Doll} */
   doll: {
@@ -32,37 +28,33 @@ export const AppState = reactive({
     {
       name: 'Warm Pillow',
       comment: `Yeah, THIS'LL teach em!`,
-      description: '',
+      description: 'Your auto payout is doubled for 30 seconds.',
       img: '/WarmPillow.png',
-      price: 0,
-      value: 0,
+      price: 500,
       active: false
     },
     {
       name: 'Unevenly Heated Burrito',
       comment: 'Hope you enjoy a sudden frozen spot',
-      description: '',
+      description: 'Your CP/click times 2 is added onto your cp/click for 30 seconds.',
       img: '/ColdBurrito.png',
-      price: 0,
-      value: 0,
+      price: 500,
       active: false
     },
     {
       name: 'Extended Warranty (Scam)',
       comment: `We've been trying to reach you`,
-      description: '',
+      description: 'Your auto payout ticks every 1 second for 30 seconds.',
       img: '/ExtendedWarranty.png',
-      price: 0,
-      value: 0,
+      price: 2500,
       active: false
     },
     {
       name: 'IRS Audit (Real)',
       comment: `Looks like somebody didn't pay the man`,
-      description: '',
+      description: 'Your CP/click times 4 is added onto your cp/click for 30 seconds.',
       img: '/IRSAudit.png',
-      price: 0,
-      value: 0,
+      price: 2500,
       active: false
     },
   ],
@@ -225,6 +217,16 @@ export const AppState = reactive({
     unlocked: false,
     equipped: false,
     colorCode: 'purple'
+  },
+  {
+    name: `Prized Patchwork`,
+    description: `It's kinda ugly... but you earned it!`,
+    img: ``,
+    silhouette: `/SilhouetteYarn`,
+    price: 0,
+    unlocked: false,
+    equipped: false,
+    colorCode: 'patchwork',
   }],
 
   clickAmount: 1,

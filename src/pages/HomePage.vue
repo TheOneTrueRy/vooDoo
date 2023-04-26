@@ -123,6 +123,11 @@ export default {
       function payAuto(){
         try {
           curseService.payAuto()
+          if(AppState.boosts[2].active){
+            setTimeout(payAuto(), 1000)
+          }else{
+            setTimeout(payAuto(), 3000)
+          }
         } catch (error) {
           Pop.error(error.message, 'Paying Auto')
         }
@@ -137,7 +142,7 @@ export default {
               duration: 3,
               scale: 0.2
             });
-            setInterval(payAuto, 3000)
+            setTimeout(payAuto(), 3000)
         });
         return {
             displaying: computed(() => AppState.displaying),

@@ -25,21 +25,12 @@ class LoadService{
     if(AppState.totalStabsData > 0){
       AppState.totalStabs = AppState.totalStabsData
     }
-    // if(AppState.spiteData == 'T'){
-    //   AppState.spite = true
-    // }
-    // if(AppState.judgementData == 'T'){
-    //   AppState.judgement = true
-    // }
-    // if(AppState.manipulationData == 'T'){
-    //   AppState.manipulation = true
-    // }
-    // if(AppState.recklessnessData == 'T'){
-    //   AppState.recklessness = true
-    // }
-    // if(AppState.pettinessData == 'T'){
-    //   AppState.pettiness = true
-    // }
+    if(AppState.boostsData.length > 0){
+      AppState.boosts = AppState.boostsData
+      AppState.boosts.forEach(b => {
+        b.active = false
+      })
+    }
     AppState.clickUpgrades.forEach(u => {
       AppState.clickAmount += (u.value * u.quantity)
     })

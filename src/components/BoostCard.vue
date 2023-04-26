@@ -17,9 +17,14 @@
       </span>
     </div>
     <div class="col-4 g-0 d-flex flex-column align-items-center justify-content-center h-100">
-      <button class="btn purchase-btn bg-gradient" @click="activateBoost(boost.name)">
+      <button v-if="!boost.active" class="btn purchase-btn bg-gradient" @click="activateBoost(boost.name)">
         <span>
           Activate
+        </span>
+      </button>
+      <button v-else class="btn purchase-btn bg-gradient" disabled>
+        <span>
+          Activated
         </span>
       </button>
       <span class="hide">
@@ -31,12 +36,23 @@
 
 
 <script>
+import { boostService } from "../services/BoostService.js";
+import Pop from "../utils/Pop.js";
+
 export default {
   props: {
     boost: {type: Object, required: true}
   },
   setup(){
-    return {}
+    return {
+      activateBoost(boostName){
+        try {
+          boostService.activateBoost(boostName)
+        } catch (error) {
+          Pop.error(error.message, 'Activating Boost')
+        }
+      }
+    }
   }
 }
 </script>
