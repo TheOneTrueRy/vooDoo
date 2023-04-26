@@ -33,11 +33,17 @@
                 </span>
               </div>
               <div class="col-6 text-center pt-2 pb-3">
-                <span class="fs-5">
+                <span v-if="!boosts[3].active" class="fs-5">
                   <i>
                     {{ autoAmount.toLocaleString('en-us') }} CP
                   </i>
                   every 3 seconds
+                </span>
+                <span v-else class="fs-5">
+                  <i>
+                    {{ autoAmount.toLocaleString('en-us') }} CP
+                  </i>
+                  every 1 second
                 </span>
               </div>
             </div>

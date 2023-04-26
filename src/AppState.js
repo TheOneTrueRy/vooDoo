@@ -36,9 +36,9 @@ export const AppState = reactive({
     {
       name: 'Unevenly Heated Burrito',
       comment: 'Hope you enjoy a sudden frozen spot',
-      description: 'Your CP/click times 2 is added onto your cp/click for 30 seconds.',
+      description: 'Your CP/Click is multiplied by 2 for 30 seconds.',
       img: '/ColdBurrito.png',
-      price: 500,
+      price: 1000,
       active: false
     },
     {
@@ -52,9 +52,9 @@ export const AppState = reactive({
     {
       name: 'IRS Audit (Real)',
       comment: `Looks like somebody didn't pay the man`,
-      description: 'Your CP/click times 4 is added onto your cp/click for 30 seconds.',
+      description: 'Your CP/click is multiplied by 4 for 30 seconds.',
       img: '/IRSAudit.png',
-      price: 2500,
+      price: 3000,
       active: false
     },
   ],
