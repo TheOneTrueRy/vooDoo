@@ -235,11 +235,11 @@ export const AppState = reactive({
 
   totalStabs: 0,
 
-  judgement: false,
-  spite: false,
-  manipulation: false,
-  recklessness: false,
-  pettiness: false,
+  judgement: loadState('judgement', Boolean),
+  spite: loadState('spite', Boolean),
+  manipulation: loadState('manipulation', Boolean),
+  recklessness: loadState('recklessness', Boolean),
+  pettiness: loadState('pettiness', Boolean),
 
   displaying: 'doll',
 
