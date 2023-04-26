@@ -58,7 +58,11 @@ export default {
     return {
       purchaseDollColor(colorName){
         try {
+          let purchaseSound = new Audio('/purchase.wav')
           dollService.purchaseDollColor(colorName)
+          if(AppState.sound){
+            purchaseSound.play()
+          }
         } catch (error) {
           Pop.error(error.message, 'Purchasing Doll Color')
         }

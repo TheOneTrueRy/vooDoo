@@ -42,7 +42,11 @@ export default {
     return {
       purchaseAutoUpgrade(upgradeName){
         try {
+          let purchaseSound = new Audio('/purchase.wav')
           upgradeService.purchaseAutoUpgrade(upgradeName)
+          if(AppState.sound){
+            purchaseSound.play()
+          }
         } catch (error) {
           Pop.error(error.message, 'Purchasing Upgrade')
         }

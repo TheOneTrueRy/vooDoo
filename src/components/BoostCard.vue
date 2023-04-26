@@ -36,6 +36,7 @@
 
 
 <script>
+import { AppState } from "../AppState.js";
 import { boostService } from "../services/BoostService.js";
 import Pop from "../utils/Pop.js";
 
@@ -47,7 +48,11 @@ export default {
     return {
       activateBoost(boostName){
         try {
+          let purchaseSound = new Audio('/purchase.wav')
           boostService.activateBoost(boostName)
+          if(AppState.sound){
+            purchaseSound.play()
+          }
         } catch (error) {
           Pop.error(error.message, 'Activating Boost')
         }
