@@ -40,7 +40,7 @@
       </button>
     </div>
     <div v-else class="col-4 g-0 d-flex flex-column align-items-center justify-content-center h-100">
-      <button v-if="!option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient" @click="purchaseDollColor(option.name)">
+      <button v-if="!option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient" @click="purchaseDollColor(option.name, option.price)">
         <span>
           Purchase
         </span>
@@ -74,13 +74,13 @@ export default {
   },
   setup(){
     return {
-      purchaseDollColor(colorName){
+      purchaseDollColor(colorName, colorPrice){
         try {
           let purchaseSound = new Audio('/purchase.wav')
-          dollService.purchaseDollColor(colorName)
-          if(AppState.sound){
+          if(AppState.sound && AppState.cursePoints >= colorPrice){
             purchaseSound.play()
           }
+          dollService.purchaseDollColor(colorName)
         } catch (error) {
           Pop.error(error.message, 'Purchasing Doll Color')
         }
@@ -91,7 +91,7 @@ export default {
         } catch (error) {
           Pop.error(error.message, 'Equipping Doll Color')
         }
-      }
+      },
     }
   }
 }

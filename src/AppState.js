@@ -35,7 +35,7 @@ export const AppState = reactive({
     },
     {
       name: 'Unevenly Heated Burrito',
-      comment: 'Hope you enjoy a sudden frozen spot',
+      comment: 'Hope you enjoy a sudden frozen spot.',
       description: 'Your CP/Click is multiplied by 2 for 30 seconds.',
       img: '/ColdBurrito.png',
       price: 1000,
@@ -43,7 +43,7 @@ export const AppState = reactive({
     },
     {
       name: 'Extended Warranty (Scam)',
-      comment: `We've been trying to reach you`,
+      comment: `We've been trying to reach you...`,
       description: 'Your auto payout ticks every 1 second for 30 seconds.',
       img: '/ExtendedWarranty.png',
       price: 2500,
@@ -51,7 +51,7 @@ export const AppState = reactive({
     },
     {
       name: 'IRS Audit (Real)',
-      comment: `Looks like somebody didn't pay the man`,
+      comment: `Looks like somebody didn't pay the man...`,
       description: 'Your CP/click is multiplied by 4 for 30 seconds.',
       img: '/IRSAudit.png',
       price: 3000,
@@ -66,7 +66,7 @@ export const AppState = reactive({
       comment: 'That needle could be a little sharper...',
       description: 'Increases your click gain by 1',
       img: '/Thimble.png',
-      price: 50,
+      price: 25,
       value: 1,
       quantity: 0
     },

@@ -5,7 +5,7 @@
   <img v-else-if="doll.kit == 'default' && doll.color == 'blue'" src="/BlueDefault.png" alt="Doll" class="doll" @click="stab()">
   <img v-else-if="doll.kit == 'default' && doll.color == 'purple'" src="/PurpleDefault.png" alt="Doll" class="doll" @click="stab()">
   <img v-else-if="doll.kit == 'default' && doll.color == 'patchwork'" src="/PatchworkDefault.png" alt="Doll" class="doll" @click="stab()">
-  <img v-else-if="doll.kit == 'devil' && doll.color == 'grey'" src="/GreyDefault.png" alt="Doll" class="doll" @click="stab()">
+  <img v-else-if="doll.kit == 'devil' && doll.color == 'grey'" src="/GreyDevil.png" alt="Doll" class="doll" @click="stab()">
   <img v-else-if="doll.kit == 'devil' && doll.color == 'red'" src="/RedDevil.png" alt="Doll" class="doll" @click="stab()">
   <img v-else-if="doll.kit == 'devil' && doll.color == 'green'" src="/GreenDevil.png" alt="Doll" class="doll" @click="stab()">
   <img v-else-if="doll.kit == 'devil' && doll.color == 'blue'" src="/BlueDevil.png" alt="Doll" class="doll" @click="stab()">

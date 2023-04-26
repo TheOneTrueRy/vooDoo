@@ -17,7 +17,7 @@
       </span>
     </div>
     <div class="col-4 g-0 d-flex flex-column align-items-center justify-content-center h-100">
-      <button class="btn purchase-btn bg-gradient" @click="purchaseAutoUpgrade(upgrade.name)">
+      <button class="btn purchase-btn bg-gradient" @click="purchaseAutoUpgrade(upgrade.name, upgrade.price)">
         <span>
           Purchase
         </span>
@@ -41,17 +41,17 @@ export default {
   },
   setup(){
     return {
-      purchaseAutoUpgrade(upgradeName){
+      purchaseAutoUpgrade(upgradeName, upgradePrice){
         try {
           let purchaseSound = new Audio('/purchase.wav')
-          upgradeService.purchaseAutoUpgrade(upgradeName)
-          if(AppState.sound){
+          if(AppState.sound && AppState.cursePoints >= upgradePrice){
             purchaseSound.play()
           }
+          upgradeService.purchaseAutoUpgrade(upgradeName)
         } catch (error) {
           Pop.error(error.message, 'Purchasing Upgrade')
         }
-      }
+      },
     }
   }
 }

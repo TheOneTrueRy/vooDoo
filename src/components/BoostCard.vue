@@ -17,7 +17,7 @@
       </span>
     </div>
     <div class="col-4 g-0 d-flex flex-column align-items-center justify-content-center h-100">
-      <button v-if="!boost.active" class="btn purchase-btn bg-gradient" @click="activateBoost(boost.name)">
+      <button v-if="!boost.active" class="btn purchase-btn bg-gradient" @click="activateBoost(boost.name, boost.price)">
         <span>
           Activate
         </span>
@@ -46,17 +46,17 @@ export default {
   },
   setup(){
     return {
-      activateBoost(boostName){
+      activateBoost(boostName, boostPrice){
         try {
           let purchaseSound = new Audio('/purchase.wav')
-          boostService.activateBoost(boostName)
-          if(AppState.sound){
+          if(AppState.sound && AppState.cursePoints >= boostPrice){
             purchaseSound.play()
           }
+          boostService.activateBoost(boostName)
         } catch (error) {
           Pop.error(error.message, 'Activating Boost')
         }
-      }
+      },
     }
   }
 }

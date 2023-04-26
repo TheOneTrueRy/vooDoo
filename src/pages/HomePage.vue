@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid vh-100">
     <div class="row h-100">
-      <div class="col-12 col-md-8">
+      <div id="not-shop" class="col-12 col-md-8">
         <div class="row">
           <div class="col-12 text-center g-0 title">
             <span>
@@ -16,8 +16,8 @@
           <div class="col-12 text-center g-0 pb-1">
             <DollImage/>
           </div>
-          <div class="col-12 bg-dark px-4">
-            <div class="row rounded border">
+          <div class="col-12 px-4">
+            <div class="row bg-dark rounded border">
               <div class="col-12 d-flex justify-content-center align-items-center py-2">
                 <img src="/CursePoints.png" alt="" height="75" class="">
                 <span class="fs-3">
@@ -42,7 +42,7 @@
                 </span>
               </div>
               <div class="col-6 text-center pt-2 pb-3">
-                <span v-if="!boosts[3].active" class="fs-5">
+                <span v-if="!boosts[2].active" class="fs-5">
                   <i v-if="boosts[0].active">
                     {{ autoAmount.toLocaleString('en-us') * 2 }} CP
                   </i>
@@ -65,7 +65,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 d-flex d-md-none align-items-center justify-content-center bg-dark pb-1">
+      <div class="col-12 d-flex d-md-none align-items-center justify-content-center pb-1">
         <span class="fs-5">
           <i class="mdi mdi-chevron-down"></i>
           SHOP
@@ -281,5 +281,11 @@ export default {
 
   #music-btn{
     cursor: pointer;
+  }
+
+  #not-shop{
+    background-image: url("/Doll-BG.png");
+    background-size: cover;
+    background-position: center;
   }
 </style>
