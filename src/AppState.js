@@ -183,7 +183,7 @@ export const AppState = reactive({
     description: `Bruised and battered.`,
     img: `/BlueYarn.png`,
     silhouette: `/SilhouetteYarn.png`,
-    price: 1000,
+    price: 2500,
     unlocked: false,
     equipped: false,
     colorCode: 'blue'
@@ -193,7 +193,7 @@ export const AppState = reactive({
     description: `Better than Gingivitis Green!`,
     img: `/GreenYarn.png`,
     silhouette: `/SilhouetteYarn.png`,
-    price: 4000,
+    price: 6000,
     unlocked: false,
     equipped: false,
     colorCode: 'green'
@@ -203,7 +203,7 @@ export const AppState = reactive({
     description: `Like a bull in a clicker game.`,
     img: `/RedYarn.png`,
     silhouette: `/SilhouetteYarn.png`,
-    price: 6000,
+    price: 10000,
     unlocked: false,
     equipped: false,
     colorCode: 'red'
@@ -213,7 +213,7 @@ export const AppState = reactive({
     description: `Oooh, pretty!`,
     img: `/PurpleYarn.png`,
     silhouette: `/SilhouetteYarn.png`,
-    price: 10000,
+    price: 15000,
     unlocked: false,
     equipped: false,
     colorCode: 'purple'
@@ -221,8 +221,8 @@ export const AppState = reactive({
   {
     name: `Prized Patchwork`,
     description: `It's kinda ugly... but you earned it!`,
-    img: ``,
-    silhouette: `/SilhouetteYarn`,
+    img: `/PatchworkDefault.png`,
+    silhouette: `/QuestionMark.png`,
     price: 0,
     unlocked: false,
     equipped: false,

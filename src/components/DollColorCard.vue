@@ -22,7 +22,24 @@
         </i>
       </span>
     </div>
-    <div class="col-4 g-0 d-flex flex-column align-items-center justify-content-center h-100">
+    <div v-if="option.name == 'Prized Patchwork'" class="col-4 g-0 d-flex flex-column align-items-center justify-content-center h-100">
+      <button v-if="!option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient" disabled>
+        <span>
+          Unlock?
+        </span>
+      </button>
+      <button v-if="option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient" @click="equipDollColor(option.name)">
+        <span>
+          Equip
+        </span>
+      </button>
+      <button v-if="option.unlocked && option.equipped" class="btn purchase-btn bg-gradient" disabled>
+        <span>
+          Equipped
+        </span>
+      </button>
+    </div>
+    <div v-else class="col-4 g-0 d-flex flex-column align-items-center justify-content-center h-100">
       <button v-if="!option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient" @click="purchaseDollColor(option.name)">
         <span>
           Purchase
