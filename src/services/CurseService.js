@@ -7,8 +7,14 @@ import { saveState } from "../utils/Store.js"
 class CurseService{
   stab(){
     let randomRoll = Math.floor((Math.random() * 1000000) + 1)
-    let clickamount = AppState.clickAmount
-    AppState.cursePoints += clickamount
+    let clickAmount = AppState.clickAmount
+    if(AppState.boosts[1].active){
+      clickAmount += AppState.clickAmount * 2
+    }
+    if(AppState.boosts[3].active){
+      clickAmount += AppState.clickAmount * 4
+    }
+    AppState.cursePoints += clickAmount
     AppState.totalStabs++
     if(AppState.totalStabs == 1){
       Pop.toast('Achievement Unlocked: "Just a little prick..."', 'success', 'top', 5000, true)
@@ -85,7 +91,11 @@ class CurseService{
   }
 
   payAuto(){
-    AppState.cursePoints += AppState.autoAmount
+    let autoPayout = AppState.autoAmount
+    if(AppState.boosts[0].active){
+      autoPayout *= 2
+    }
+    AppState.cursePoints += autoPayout
     saveState('cursePoints', AppState.cursePoints)
   }
 }
