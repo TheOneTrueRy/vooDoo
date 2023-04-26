@@ -1,5 +1,4 @@
 import { AppState } from "../AppState.js"
-import { logger } from "../utils/Logger.js"
 
 
 class LoadService{
@@ -24,7 +23,6 @@ class LoadService{
     }
     if(AppState.totalStabsData > 0){
       AppState.totalStabs = AppState.totalStabsData
-      logger.log(AppState.totalStabs)
     }
     if(AppState.boostsData.length > 0){
       AppState.boosts = AppState.boostsData
