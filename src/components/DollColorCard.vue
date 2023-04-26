@@ -1,8 +1,8 @@
 <template>
   <div class="row rounded elevation-2 border border-dark bg-dark bg-gradient align-items-center py-1">
     <div class="col-3 d-flex justify-content-center align-items-center g-0 h-100">
-      <img v-if="option.unlocked" :src="option.img" :alt="option.name" height="120" width="100">
-      <img v-else-if="!option.unlocked" :src="option.silhouette" :alt="option.name" height="120" width="100">
+      <img v-if="option.unlocked" :src="option.img" :alt="option.name">
+      <img v-else-if="!option.unlocked" :src="option.silhouette" :alt="option.name">
     </div>
     <div class="col-5 d-flex flex-column h-100 g-0">
       <span v-if="option.unlocked" class="fs-5">
@@ -113,5 +113,10 @@ export default {
 
   .invisible{
     color: transparent !important;
+  }
+
+  img{
+    max-width: 90%;
+    max-height: 120px;
   }
 </style>

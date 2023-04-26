@@ -13,7 +13,7 @@
               <input v-model="dollName" type="text" name="doll-name" id="doll-name" class="fs-1 text-center text-light border rounded">
             </form>
           </div>
-          <div class="col-12 text-center g-0">
+          <div class="col-12 text-center g-0 py-1">
             <DollImage/>
           </div>
           <div class="col-12 bg-dark px-4">
