@@ -1,5 +1,4 @@
 import { AppState } from "../AppState.js"
-import { logger } from "../utils/Logger.js"
 import Pop from "../utils/Pop.js"
 import { saveState } from "../utils/Store.js"
 
@@ -9,10 +8,10 @@ class CurseService{
     let randomRoll = Math.floor((Math.random() * 1000000) + 1)
     let clickAmount = AppState.clickAmount
     if(AppState.boosts[1].active){
-      clickAmount += AppState.clickAmount * 2
+      clickAmount += AppState.clickAmount
     }
     if(AppState.boosts[3].active){
-      clickAmount += AppState.clickAmount * 4
+      clickAmount += AppState.clickAmount * 3
     }
     AppState.cursePoints += clickAmount
     AppState.totalStabs++

@@ -26,7 +26,13 @@
               </div>
               <div class="col-6 text-center pt-2 pb-3">
                 <span class="fs-5">
-                  <i>
+                  <i v-if="boosts[1].active && !boosts[3].active">
+                    {{ clickAmount.toLocaleString('en-us') * 2 }} CP
+                  </i>
+                  <i v-else-if="!boosts[1].active && boosts[3].active">
+                    {{ clickAmount.toLocaleString('en-us') * 4 }} CP
+                  </i>
+                  <i v-else-if="!boosts[1].active && !boosts[3].active">
                     {{ clickAmount.toLocaleString('en-us') }} CP
                   </i>
                   per click
@@ -34,13 +40,19 @@
               </div>
               <div class="col-6 text-center pt-2 pb-3">
                 <span v-if="!boosts[3].active" class="fs-5">
-                  <i>
+                  <i v-if="boosts[0].active">
+                    {{ autoAmount.toLocaleString('en-us') * 2 }} CP
+                  </i>
+                  <i v-if="!boosts[0].active">
                     {{ autoAmount.toLocaleString('en-us') }} CP
                   </i>
                   every 3 seconds
                 </span>
                 <span v-else class="fs-5">
-                  <i>
+                  <i v-if="boosts[0].active">
+                    {{ autoAmount.toLocaleString('en-us') * 2 }} CP
+                  </i>
+                  <i v-if="!boosts[0].active">
                     {{ autoAmount.toLocaleString('en-us') }} CP
                   </i>
                   every 1 second
