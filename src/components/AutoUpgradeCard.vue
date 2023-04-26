@@ -31,6 +31,7 @@
 
 
 <script>
+import { AppState } from "../AppState.js";
 import { upgradeService } from "../services/UpgradeService.js";
 import Pop from "../utils/Pop.js";
 
