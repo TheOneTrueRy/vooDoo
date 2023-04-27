@@ -234,7 +234,13 @@ export default {
     font-size: 3.5em;
   }
 
-  @media screen and (min-width: 756px) {
+  @media screen and (min-width: 756px) and (max-width: 889px) {
+    .title{
+      font-size: 4.5em;
+    }
+  }
+
+  @media screen and (min-width: 890px) {
     .title{
       font-size: 5.5em;
     }
