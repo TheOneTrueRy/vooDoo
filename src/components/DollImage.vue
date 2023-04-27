@@ -111,6 +111,51 @@ export default {
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
+@-webkit-keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg) scale(0.95);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg) scale(0.95);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg) scale(0.95);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg) scale(0.95);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg) scale(0.95);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg) scale(0.95);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
   .doll{
     height: 60vh;
     max-width: 100%;

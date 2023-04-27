@@ -300,7 +300,7 @@ export default {
   }
 
   .disable-zoom{
-    touch-action: manipulation;
+    touch-action: manipulation pan-x pan-y pinch-zoom;
     user-zoom: fixed;
   }
 </style>
