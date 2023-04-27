@@ -65,7 +65,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 d-flex d-md-none align-items-center justify-content-center pb-1">
+      <div class="col-12 bg-dark d-flex d-md-none align-items-center justify-content-center pb-1">
         <span class="fs-5">
           <i class="mdi mdi-chevron-down"></i>
           SHOP
