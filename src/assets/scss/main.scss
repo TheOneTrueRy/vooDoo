@@ -47,7 +47,6 @@ img{
   -webkit-user-drag: none;
 }
 
-.customClass{
-  background-color: #111111;
-  color: white;
+* {
+  touch-action: manipulation;
 }
