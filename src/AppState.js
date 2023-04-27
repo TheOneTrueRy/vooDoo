@@ -92,7 +92,7 @@ export const AppState = reactive({
       comment: `This'll make 'em salty.`,
       description: 'Increase your auto-payout by 2',
       img: '/vooDoo/Salt.png',
-      price: 150,
+      price: 50,
       value: 2,
       quantity: 0
     },
@@ -101,7 +101,7 @@ export const AppState = reactive({
       comment: `They just can't catch a break...`,
       description: 'Increase your auto-payout by 6',
       img: '/vooDoo/BrokenMirror.png',
-      price: 600,
+      price: 350,
       value: 6,
       quantity: 0
     },
