@@ -11,7 +11,7 @@ class DollService{
     if(dollName == 'Jeff'){
       Swal.fire({
         title: `No...`,
-        imageUrl: '/Jeff.png',
+        imageUrl: '/vooDoo/Jeff.png',
         imageHeight: 160,
         imageWidth: 160,
         position: 'top-start',
@@ -140,7 +140,7 @@ class DollService{
         position: 'top',
         timer: 10000,
         timerProgressBar: true,
-        imageUrl: '/PatchworkDefaultUnlock.png'
+        imageUrl: '/vooDoo/PatchworkDefaultUnlock.png'
       })
       AppState.dollColors[5].unlocked = true
       saveState('dollColors', AppState.dollColors)
@@ -201,7 +201,7 @@ class DollService{
         position: 'top',
         timer: 10000,
         timerProgressBar: true,
-        imageUrl: '/PatchworkDefaultUnlock.png'
+        imageUrl: '/vooDoo/PatchworkDefaultUnlock.png'
       })
       AppState.dollColors[5].unlocked = true
       saveState('dollColors', AppState.dollColors)

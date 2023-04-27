@@ -19,7 +19,7 @@ class CurseService{
     if(AppState.totalStabs == 1){
       Swal.fire({
         title: `Achievement Unlocked: "Just a little prick..."`,
-        imageUrl: '/AchievementDoll.png',
+        imageUrl: '/vooDoo/AchievementDoll.png',
         imageHeight: 160,
         imageWidth: 160,
         position: 'top-start',
@@ -34,7 +34,7 @@ class CurseService{
     if(AppState.totalStabs == 37){
       Swal.fire({
         title: `Achievement Unlocked: "CAAAARL, THAT KILLS PEOPLE!"`,
-        imageUrl: '/AchievementDoll.png',
+        imageUrl: '/vooDoo/AchievementDoll.png',
         imageHeight: 160,
         imageWidth: 160,
         position: 'top-start',
@@ -49,7 +49,7 @@ class CurseService{
     if(AppState.totalStabs == 100){
       Swal.fire({
         title: `Achievement Unlocked: "Did you name your doll Caesar?"`,
-        imageUrl: '/AchievementDoll.png',
+        imageUrl: '/vooDoo/AchievementDoll.png',
         imageHeight: 160,
         imageWidth: 160,
         position: 'top-start',
@@ -64,7 +64,7 @@ class CurseService{
     if(AppState.totalStabs == 250){
       Swal.fire({
         title: `Achievement Unlocked: "That's a lot of @#$%ing cursing!"`,
-        imageUrl: '/AchievementDoll.png',
+        imageUrl: '/vooDoo/AchievementDoll.png',
         imageHeight: 160,
         imageWidth: 160,
         position: 'top-start',
@@ -79,7 +79,7 @@ class CurseService{
     if(AppState.totalStabs == 450){
       Swal.fire({
         title: `Achievement Unlocked: "Oh happy needle, this is thy sheathe..."`,
-        imageUrl: '/AchievementDoll.png',
+        imageUrl: '/vooDoo/AchievementDoll.png',
         imageHeight: 160,
         imageWidth: 160,
         position: 'top-start',
@@ -94,7 +94,7 @@ class CurseService{
     if(AppState.totalStabs == 700){
       Swal.fire({
         title: `Achievement Unlocked: "YEAH, STICK IT TO 'EM!"`,
-        imageUrl: '/AchievementDoll.png',
+        imageUrl: '/vooDoo/AchievementDoll.png',
         imageHeight: 160,
         imageWidth: 160,
         position: 'top-start',
@@ -109,7 +109,7 @@ class CurseService{
     if(AppState.totalStabs == 1000){
       Swal.fire({
         title: `Achievement Unlocked: "What are you gonna do, stab me?"`,
-        imageUrl: '/AchievementDoll.png',
+        imageUrl: '/vooDoo/AchievementDoll.png',
         imageHeight: 160,
         imageWidth: 160,
         position: 'top-start',
@@ -124,7 +124,7 @@ class CurseService{
     if(AppState.totalStabs == 1500){
       Swal.fire({
         title: `Achievement Unlocked: "Wow, you're still going huh?"`,
-        imageUrl: '/AchievementDoll.png',
+        imageUrl: '/vooDoo/AchievementDoll.png',
         imageHeight: 160,
         imageWidth: 160,
         position: 'top-start',
@@ -139,7 +139,7 @@ class CurseService{
     if(AppState.totalStabs == 2000){
       Swal.fire({
         title: `Achievement Unlocked: "You know, you're the only person in my life who has ever stuck around..."`,
-        imageUrl: '/AchievementDoll.png',
+        imageUrl: '/vooDoo/AchievementDoll.png',
         imageHeight: 160,
         imageWidth: 160,
         position: 'top-start',
@@ -154,7 +154,7 @@ class CurseService{
     if(AppState.totalStabs == 2500){
       Swal.fire({
         title: `Achievement Unlocked: "Did you catch my last pun? STUCK around? Haha..."`,
-        imageUrl: '/AchievementDoll.png',
+        imageUrl: '/vooDoo/AchievementDoll.png',
         imageHeight: 160,
         imageWidth: 160,
         position: 'top-start',
@@ -169,7 +169,7 @@ class CurseService{
     if(AppState.totalStabs == 3000){
       Swal.fire({
         title: `Achievement Unlocked: "Do you still think I'm funny? I'm pretty insecure about my jokes."`,
-        imageUrl: '/AchievementDoll.png',
+        imageUrl: '/vooDoo/AchievementDoll.png',
         imageHeight: 160,
         imageWidth: 160,
         position: 'top-start',
@@ -184,7 +184,7 @@ class CurseService{
     if(AppState.totalStabs == 3500){
       Swal.fire({
         title: `Achievement Unlocked: "You're lonely too, huh?"`,
-        imageUrl: '/AchievementDoll.png',
+        imageUrl: '/vooDoo/AchievementDoll.png',
         imageHeight: 160,
         imageWidth: 160,
         position: 'top-start',
@@ -199,7 +199,7 @@ class CurseService{
     if(AppState.totalStabs == 4000){
       Swal.fire({
         title: `Achievement Unlocked: "My name is Jeff by the way."`,
-        imageUrl: '/AchievementDoll.png',
+        imageUrl: '/vooDoo/AchievementDoll.png',
         imageHeight: 160,
         imageWidth: 160,
         position: 'top-start',
@@ -214,7 +214,7 @@ class CurseService{
     if(AppState.totalStabs == 4200){
       Swal.fire({
         title: `Achievement Unlocked: "My programmer is getting tired..."`,
-        imageUrl: '/AchievementDoll.png',
+        imageUrl: '/vooDoo/AchievementDoll.png',
         imageHeight: 160,
         imageWidth: 160,
         position: 'top-start',
@@ -230,7 +230,7 @@ class CurseService{
       Pop.toast(`Achievement Unlocked: "I'll miss you... thank you for playing. :)"`, 'success', 'top-start', 10000, true)
       Swal.fire({
         title: `Achievement Unlocked: "I'll miss you... thank you for playing. :)"`,
-        imageUrl: '/AchievementDoll.png',
+        imageUrl: '/vooDoo/AchievementDoll.png',
         imageHeight: 160,
         imageWidth: 160,
         position: 'top-start',
@@ -247,7 +247,7 @@ class CurseService{
       saveState('spite', true)
       Swal.fire({
         title: 'You just got a random drop of: Essence of Spite!',
-        imageUrl: '/Essence.png',
+        imageUrl: '/vooDoo/Essence.png',
         imageHeight: 120,
         imageWidth: 160,
         position: 'top-start',
@@ -264,7 +264,7 @@ class CurseService{
       saveState('judgement', true)
       Swal.fire({
         title: 'You just got a random drop of: Essence of Judgement!',
-        imageUrl: '/Essence.png',
+        imageUrl: '/vooDoo/Essence.png',
         imageHeight: 120,
         imageWidth: 160,
         position: 'top-start',
@@ -281,7 +281,7 @@ class CurseService{
       saveState('manipulation', true)
       Swal.fire({
         title: 'You just got a random drop of: Essence of Manipulation!',
-        imageUrl: '/Essence.png',
+        imageUrl: '/vooDoo/Essence.png',
         imageHeight: 120,
         imageWidth: 160,
         position: 'top-start',
@@ -298,7 +298,7 @@ class CurseService{
       saveState('recklessness', true)
       Swal.fire({
         title: 'You just got a random drop of: Essence of Recklessness!',
-        imageUrl: '/Essence.png',
+        imageUrl: '/vooDoo/Essence.png',
         imageHeight: 120,
         imageWidth: 160,
         position: 'top-start',
@@ -315,7 +315,7 @@ class CurseService{
       saveState('pettiness', true)
       Swal.fire({
         title: 'You just got a random drop of: Essence of Pettiness!',
-        imageUrl: '/Essence.png',
+        imageUrl: '/vooDoo/Essence.png',
         imageHeight: 120,
         imageWidth: 160,
         position: 'top-start',
