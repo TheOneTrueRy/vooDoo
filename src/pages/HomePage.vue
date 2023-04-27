@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid vh-100">
     <div class="row h-100">
-      <div id="not-shop" class="col-12 col-md-8">
+      <div id="not-shop" class="col-12 col-md-8 bg-dark">
         <div class="row">
           <div class="col-12 text-center g-0 title">
             <span>
@@ -64,13 +64,13 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-12 bg-dark d-flex d-md-none align-items-center justify-content-center pb-1">
-        <span class="fs-5">
-          <i class="mdi mdi-chevron-down"></i>
-          SHOP
-          <i class="mdi mdi-chevron-down"></i>
-        </span>
+        <div class="col-12 d-flex d-md-none align-items-center justify-content-center pb-1">
+          <span class="fs-5">
+            <i class="mdi mdi-chevron-down"></i>
+            SHOP
+            <i class="mdi mdi-chevron-down"></i>
+          </span>
+        </div>
       </div>
       <div class="col-12 col-md-4 vh-100 bg-dark border">
         <div class="row shop-top align-items-end">

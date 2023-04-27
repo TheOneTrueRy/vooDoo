@@ -16,6 +16,11 @@ export const AppState = reactive({
   dollData: loadState('doll', Doll),
   cursePointsData: loadState('cursePoints', Number),
   totalStabsData: loadState('totalStabs', Number),
+  spiteData: loadState('spite', []),
+  judgementData: loadState('judgement', []),
+  manipulationData: loadState('manipulation', []),
+  pettinessData: loadState('pettiness', []),
+  recklessnessData: loadState('recklessness', []),
 
   /** @type {import('./models/Doll.js').Doll} */
   doll: {
@@ -27,7 +32,7 @@ export const AppState = reactive({
   boosts: [
     {
       name: 'Warm Pillow',
-      comment: `Yeah, THIS'LL teach em!`,
+      comment: `Nighty night... heheh.`,
       description: 'Your auto payout is doubled for 30 seconds.',
       img: '/vooDoo/WarmPillow.png',
       price: 500,
@@ -51,7 +56,7 @@ export const AppState = reactive({
     },
     {
       name: 'IRS Audit (Real)',
-      comment: `Looks like somebody didn't pay the man...`,
+      comment: `Somebody didn't pay the man...`,
       description: 'Your CP/click is multiplied by 4 for 30 seconds.',
       img: '/vooDoo/IRSAudit.png',
       price: 3000,

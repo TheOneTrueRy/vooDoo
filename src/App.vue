@@ -28,6 +28,5 @@ export default {
 </script>
 <style lang="scss">
 @import "./assets/scss/main.scss";
-@import '@sweetalert2/themes/dark/dark.scss';
 
 </style>

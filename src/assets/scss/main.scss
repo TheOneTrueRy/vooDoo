@@ -3,6 +3,7 @@
 @import "./_overrides.scss";
 @import "./_utilities.scss";
 @import "./loaders.scss";
+@import '@sweetalert2/themes/dark/dark.scss';
 
 body{
   overscroll-behavior: none;

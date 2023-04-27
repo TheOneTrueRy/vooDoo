@@ -39,16 +39,13 @@
 
 
 <script>
-import { computed, onMounted } from "vue";
+import { computed } from "vue";
 import Pop from "../utils/Pop.js";
 import { curseService } from "../services/CurseService.js";
 import { AppState } from "../AppState.js";
 
 export default {
   setup(){
-    onMounted(() => {
-      
-    })
     return {
       stab(){
         try {

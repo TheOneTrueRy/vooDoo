@@ -30,6 +30,21 @@ class LoadService{
         b.active = false
       })
     }
+    if(AppState.spiteData.length > 0){
+      AppState.spite = true
+    }
+    if(AppState.judgementData.length > 0){
+      AppState.judgement = true
+    }
+    if(AppState.manipulationData.length > 0){
+      AppState.manipulation = true
+    }
+    if(AppState.recklessnessData.length > 0){
+      AppState.recklessness = true
+    }
+    if(AppState.pettinessData.length > 0){
+      AppState.pettiness = true
+    }
     AppState.clickUpgrades.forEach(u => {
       AppState.clickAmount += (u.value * u.quantity)
     })
