@@ -76,7 +76,7 @@ export default {
     return {
       purchaseDollColor(colorName, colorPrice){
         try {
-          let purchaseSound = new Audio('/purchase.wav')
+          let purchaseSound = new Audio('/vooDoo/purchase.wav')
           if(AppState.sound && AppState.cursePoints >= colorPrice){
             purchaseSound.play()
           }

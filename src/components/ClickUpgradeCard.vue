@@ -43,7 +43,7 @@ export default {
     return {
       purchaseClickUpgrade(upgradeName, upgradePrice){
         try {
-          let purchaseSound = new Audio('/purchase.wav')
+          let purchaseSound = new Audio('/vooDoo/purchase.wav')
           if(AppState.sound && AppState.cursePoints >= upgradePrice){
             purchaseSound.play()
           }

@@ -48,7 +48,7 @@ export default {
     return {
       activateBoost(boostName, boostPrice){
         try {
-          let purchaseSound = new Audio('/purchase.wav')
+          let purchaseSound = new Audio('/vooDoo/purchase.wav')
           if(AppState.sound && AppState.cursePoints >= boostPrice){
             purchaseSound.play()
           }
