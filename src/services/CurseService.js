@@ -28,7 +28,9 @@ class CurseService{
         showConfirmButton: false,
         padding: 0,
         width: "20rem",
-        customClass: 'customClass'
+        customClass: {
+          container: 'bg-dark'
+        }
       })
     }
     if(AppState.totalStabs == 37){
