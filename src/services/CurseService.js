@@ -29,7 +29,7 @@ class CurseService{
         padding: 0,
         width: "20rem",
         customClass: {
-          container: 'bg-dark'
+          container: 'customClass'
         }
       })
     }
