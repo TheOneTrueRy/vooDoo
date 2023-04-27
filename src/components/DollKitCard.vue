@@ -25,7 +25,7 @@
     <div class="col-4 g-0 d-flex flex-column align-items-center justify-content-center h-100">
       <button v-if="!option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient" @click="purchaseDollKit(option.name)" :class="[option.essence == 'Spite' && spite || option.essence == 'Judgement' && judgement || option.essence == 'Manipulation' && manipulation || option.essence == 'Recklessness' && recklessness || option.essence == 'Pettiness' && pettiness ? 'essence' : '']">
         <span>
-          Purchase
+          Redeem
         </span>
       </button>
       <button v-if="option.unlocked && !option.equipped" class="btn purchase-btn bg-gradient" @click="equipDollKit(option.name)">

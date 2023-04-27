@@ -240,7 +240,7 @@ class CurseService{
         width: "20rem"
       })
     }
-    if(randomRoll < 1000000 && randomRoll > 999750 && AppState.spite == false){
+    if(randomRoll < 1000000 && randomRoll > 999650 && AppState.spite == false){
       AppState.spite = true
       saveState('spite', ['ha', 'ha'])
       Swal.fire({
@@ -257,7 +257,7 @@ class CurseService{
         width: "20rem"
       })
     }
-    if(randomRoll < 999750 && randomRoll > 999500 && AppState.judgement == false){
+    if(randomRoll < 999650 && randomRoll > 999300 && AppState.judgement == false){
       AppState.judgement = true
       saveState('judgement', ['ha', 'ha'])
       Swal.fire({
@@ -274,7 +274,7 @@ class CurseService{
         width: "20rem"
       })
     }
-    if(randomRoll < 999500 && randomRoll > 999250 && AppState.manipulation == false){
+    if(randomRoll < 999300 && randomRoll > 998950 && AppState.manipulation == false){
       AppState.manipulation = true
       saveState('manipulation', ['ha', 'ha'])
       Swal.fire({
@@ -291,7 +291,7 @@ class CurseService{
         width: "20rem"
       })
     }
-    if(randomRoll < 999250 && randomRoll > 999000 && AppState.recklessness == false){
+    if(randomRoll < 998600 && randomRoll > 998250 && AppState.recklessness == false){
       AppState.recklessness = true
       saveState('recklessness', ['ha', 'ha'])
       Swal.fire({
