@@ -27,7 +27,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(AppState.totalStabs == 37){
@@ -42,7 +43,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(AppState.totalStabs == 100){
@@ -57,7 +59,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(AppState.totalStabs == 250){
@@ -72,7 +75,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(AppState.totalStabs == 450){
@@ -87,7 +91,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(AppState.totalStabs == 700){
@@ -102,7 +107,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(AppState.totalStabs == 1000){
@@ -117,7 +123,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(AppState.totalStabs == 1500){
@@ -132,7 +139,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(AppState.totalStabs == 2000){
@@ -147,7 +155,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(AppState.totalStabs == 2500){
@@ -162,7 +171,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(AppState.totalStabs == 3000){
@@ -177,7 +187,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(AppState.totalStabs == 3500){
@@ -192,7 +203,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(AppState.totalStabs == 4000){
@@ -207,7 +219,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(AppState.totalStabs == 4200){
@@ -222,7 +235,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(AppState.totalStabs == 4300){
@@ -237,7 +251,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(randomRoll < 1000000 && randomRoll > 999650 && AppState.spite == false){
@@ -254,7 +269,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(randomRoll < 999650 && randomRoll > 999300 && AppState.judgement == false){
@@ -271,7 +287,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(randomRoll < 999300 && randomRoll > 998950 && AppState.manipulation == false){
@@ -288,7 +305,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(randomRoll < 998600 && randomRoll > 998250 && AppState.recklessness == false){
@@ -305,7 +323,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     if(randomRoll < 999000 && randomRoll > 998750 && AppState.pettiness == false){
@@ -322,7 +341,8 @@ class CurseService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        customClass: 'customClass'
       })
     }
     saveState('totalStabs', AppState.totalStabs)
