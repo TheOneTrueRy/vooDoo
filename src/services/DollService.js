@@ -20,7 +20,9 @@ class DollService{
         timerProgressBar: true,
         showConfirmButton: false,
         padding: 0,
-        width: "20rem"
+        width: "20rem",
+        background: '#111111',
+        color: '#ffffff'
       })
       dollName = 'Name Your Doll!'
     }
@@ -32,7 +34,9 @@ class DollService{
         timerProgressBar: true,
         imageUrl: '',
         position: 'top-end',
-        showConfirmButton: false
+        showConfirmButton: false,
+        background: '#111111',
+        color: '#ffffff'
       })
     }
     AppState.doll.name = dollName
@@ -57,7 +61,9 @@ class DollService{
         timerProgressBar: true,
         imageUrl: '',
         position: 'top-end',
-        showConfirmButton: false
+        showConfirmButton: false,
+        background: '#111111',
+        color: '#ffffff'
       })
     }
     if(AppState.dollKits[kitIndex].essence == 'Judgement' && AppState.judgement == true){
@@ -75,7 +81,9 @@ class DollService{
         timerProgressBar: true,
         imageUrl: '',
         position: 'top-end',
-        showConfirmButton: false
+        showConfirmButton: false,
+        background: '#111111',
+        color: '#ffffff'
       })
     }
     if(AppState.dollKits[kitIndex].essence == 'Manipulation' && AppState.manipulation == true){
@@ -93,7 +101,9 @@ class DollService{
         timerProgressBar: true,
         imageUrl: '',
         position: 'top-end',
-        showConfirmButton: false
+        showConfirmButton: false,
+        background: '#111111',
+        color: '#ffffff'
       })
     }
     if(AppState.dollKits[kitIndex].essence == 'Recklessness' && AppState.recklessness == true){
@@ -111,7 +121,9 @@ class DollService{
         timerProgressBar: true,
         imageUrl: '',
         position: 'top-end',
-        showConfirmButton: false
+        showConfirmButton: false,
+        background: '#111111',
+        color: '#ffffff'
       })
     }
     if(AppState.dollKits[kitIndex].essence == 'Pettiness' && AppState.pettiness == true){
@@ -129,7 +141,9 @@ class DollService{
         timerProgressBar: true,
         imageUrl: '',
         position: 'top-end',
-        showConfirmButton: false
+        showConfirmButton: false,
+        background: '#111111',
+        color: '#ffffff'
       })
     }
     if(AppState.dollColors[0].unlocked && AppState.dollColors[1].unlocked && AppState.dollColors[2].unlocked && AppState.dollColors[3].unlocked && AppState.dollColors[4].unlocked && AppState.dollKits[0].unlocked && AppState.dollKits[1].unlocked && AppState.dollKits[2].unlocked && AppState.dollKits[3].unlocked && AppState.dollKits[4].unlocked && AppState.dollKits[5].unlocked){
@@ -140,7 +154,9 @@ class DollService{
         position: 'top',
         timer: 10000,
         timerProgressBar: true,
-        imageUrl: '/vooDoo/PatchworkDefaultUnlock.png'
+        imageUrl: '/vooDoo/PatchworkDefaultUnlock.png',
+        background: '#111111',
+        color: '#ffffff'
       })
       AppState.dollColors[5].unlocked = true
       saveState('dollColors', AppState.dollColors)
@@ -165,7 +181,9 @@ class DollService{
         timerProgressBar: true,
         imageUrl: '',
         position: 'top-end',
-        showConfirmButton: false
+        showConfirmButton: false,
+        background: '#111111',
+        color: '#ffffff'
       })
     }
   }
@@ -190,7 +208,9 @@ class DollService{
         timerProgressBar: true,
         imageUrl: '',
         position: 'top-end',
-        showConfirmButton: false
+        showConfirmButton: false,
+        background: '#111111',
+        color: '#ffffff'
       })
     }
     if(AppState.dollColors[0].unlocked && AppState.dollColors[1].unlocked && AppState.dollColors[2].unlocked && AppState.dollColors[3].unlocked && AppState.dollColors[4].unlocked && AppState.dollKits[0].unlocked && AppState.dollKits[1].unlocked && AppState.dollKits[2].unlocked && AppState.dollKits[3].unlocked && AppState.dollKits[4].unlocked && AppState.dollKits[5].unlocked){
@@ -201,7 +221,9 @@ class DollService{
         position: 'top',
         timer: 10000,
         timerProgressBar: true,
-        imageUrl: '/vooDoo/PatchworkDefaultUnlock.png'
+        imageUrl: '/vooDoo/PatchworkDefaultUnlock.png',
+        background: '#111111',
+        color: '#ffffff'
       })
       AppState.dollColors[5].unlocked = true
       saveState('dollColors', AppState.dollColors)
@@ -225,7 +247,9 @@ class DollService{
         timerProgressBar: true,
         imageUrl: '',
         position: 'top-end',
-        showConfirmButton: false
+        showConfirmButton: false,
+        background: '#111111',
+        color: '#ffffff'
       })
     }
   }

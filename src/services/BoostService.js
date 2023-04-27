@@ -23,7 +23,9 @@ class BoostService{
         timerProgressBar: true,
         imageUrl: '',
         position: 'top-end',
-        showConfirmButton: false
+        showConfirmButton: false,
+        background: '#111111',
+        color: '#ffffff'
       })
     }
   }

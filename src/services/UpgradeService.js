@@ -21,7 +21,9 @@ class UpgradeService{
         timerProgressBar: true,
         imageUrl: '',
         position: 'top-end',
-        showConfirmButton: false
+        showConfirmButton: false,
+        background: '#111111',
+        color: '#ffffff'
       })
     }
   }
@@ -42,7 +44,9 @@ class UpgradeService{
         timerProgressBar: true,
         imageUrl: '',
         position: 'top-end',
-        showConfirmButton: false
+        showConfirmButton: false,
+        background: '#111111',
+        color: '#ffffff'
       })
     }
   }
