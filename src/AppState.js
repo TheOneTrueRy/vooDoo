@@ -221,7 +221,7 @@ export const AppState = reactive({
   {
     name: `Prized Patchwork`,
     description: `It's kinda ugly... but you earned it!`,
-    img: `/PatchworkDefault.png`,
+    img: `/PatchworkDefaultUnlock.png`,
     silhouette: `/QuestionMark.png`,
     price: 0,
     unlocked: false,

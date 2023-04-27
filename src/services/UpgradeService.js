@@ -1,5 +1,5 @@
+import Swal from "sweetalert2"
 import { AppState } from "../AppState.js"
-import Pop from "../utils/Pop.js"
 import { saveState } from "../utils/Store.js"
 
 
@@ -14,7 +14,15 @@ class UpgradeService{
       saveState('clickUpgrades', AppState.clickUpgrades)
       saveState('cursePoints', AppState.cursePoints)
     }else{
-      Pop.error('Not enough Curse Points!')
+      Swal.fire({
+        title: `You don't have enough Curse Points for that!`,
+        toast: true,
+        timer: 4000,
+        timerProgressBar: true,
+        imageUrl: '',
+        position: 'top-end',
+        showConfirmButton: false
+      })
     }
   }
   purchaseAutoUpgrade(upgradeName){
@@ -27,7 +35,15 @@ class UpgradeService{
       saveState('autoUpgrades', AppState.autoUpgrades)
       saveState('cursePoints', AppState.cursePoints)
     }else{
-      Pop.error('Not enough Curse Points!')
+      Swal.fire({
+        title: `You don't have enough Curse Points for that!`,
+        toast: true,
+        timer: 4000,
+        timerProgressBar: true,
+        imageUrl: '',
+        position: 'top-end',
+        showConfirmButton: false
+      })
     }
   }
 }

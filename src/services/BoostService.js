@@ -1,3 +1,4 @@
+import Swal from "sweetalert2"
 import { AppState } from "../AppState.js"
 import Pop from "../utils/Pop.js"
 import { saveState } from "../utils/Store.js"
@@ -15,7 +16,15 @@ class BoostService{
       }, 30000)
       saveState('boosts', AppState.boosts)
     }else{
-      Pop.error(`You don't have enough Curse Points for that!`)
+      Swal.fire({
+        title: `You don't have enough Curse Points for that!`,
+        toast: true,
+        timer: 4000,
+        timerProgressBar: true,
+        imageUrl: '',
+        position: 'top-end',
+        showConfirmButton: false
+      })
     }
   }
 }

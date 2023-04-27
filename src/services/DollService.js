@@ -1,6 +1,5 @@
+import Swal from "sweetalert2"
 import { AppState } from "../AppState.js"
-import { logger } from "../utils/Logger.js"
-import Pop from "../utils/Pop.js"
 import { saveState } from "../utils/Store.js"
 
 
@@ -10,11 +9,31 @@ class DollService{
       dollName = 'Name Your Doll!'
     }
     if(dollName == 'Jeff'){
-      Pop.error('No...')
+      Swal.fire({
+        title: `No...`,
+        imageUrl: '/Jeff.png',
+        imageHeight: 160,
+        imageWidth: 160,
+        position: 'top-start',
+        toast: true,
+        timer: 10000,
+        timerProgressBar: true,
+        showConfirmButton: false,
+        padding: 0,
+        width: "20rem"
+      })
       dollName = 'Name Your Doll!'
     }
     if(dollName != 'Name Your Doll!'){
-      Pop.success('Doll Name successfully set!')
+      Swal.fire({
+        title: `Doll name successfully set!`,
+        toast: true,
+        timer: 4000,
+        timerProgressBar: true,
+        imageUrl: '',
+        position: 'top-end',
+        showConfirmButton: false
+      })
     }
     AppState.doll.name = dollName
     saveState('doll', AppState.doll)
@@ -31,7 +50,15 @@ class DollService{
       saveState('dollKits', AppState.dollKits)
       saveState('doll', AppState.doll)
     }else if(AppState.dollKits[kitIndex].essence == 'Spite' && AppState.spite == false){
-      Pop.error(`You're missing the Essence of Spite!`)
+      Swal.fire({
+        title: `You're missing the Essence of Spite!`,
+        toast: true,
+        timer: 4000,
+        timerProgressBar: true,
+        imageUrl: '',
+        position: 'top-end',
+        showConfirmButton: false
+      })
     }
     if(AppState.dollKits[kitIndex].essence == 'Judgement' && AppState.judgement == true){
       AppState.dollKits[currentlyEquippedIndex].equipped = false
@@ -41,7 +68,15 @@ class DollService{
       saveState('dollKits', AppState.dollKits)
       saveState('doll', AppState.doll)
     }else if(AppState.dollKits[kitIndex].essence == 'Judgement' && AppState.judgement == false){
-      Pop.error(`You're missing the Essence of Judgement!`)
+      Swal.fire({
+        title: `You're missing the Essence of Judgement!`,
+        toast: true,
+        timer: 4000,
+        timerProgressBar: true,
+        imageUrl: '',
+        position: 'top-end',
+        showConfirmButton: false
+      })
     }
     if(AppState.dollKits[kitIndex].essence == 'Manipulation' && AppState.manipulation == true){
       AppState.dollKits[currentlyEquippedIndex].equipped = false
@@ -51,7 +86,15 @@ class DollService{
       saveState('dollKits', AppState.dollKits)
       saveState('doll', AppState.doll)
     }else if(AppState.dollKits[kitIndex].essence == 'Manipulation' && AppState.manipulation == false){
-      Pop.error(`You're missing the Essence of Manipulation!`)
+      Swal.fire({
+        title: `You're missing the Essence of Manipulation!`,
+        toast: true,
+        timer: 4000,
+        timerProgressBar: true,
+        imageUrl: '',
+        position: 'top-end',
+        showConfirmButton: false
+      })
     }
     if(AppState.dollKits[kitIndex].essence == 'Recklessness' && AppState.recklessness == true){
       AppState.dollKits[currentlyEquippedIndex].equipped = false
@@ -61,7 +104,15 @@ class DollService{
       saveState('dollKits', AppState.dollKits)
       saveState('doll', AppState.doll)
     }else if(AppState.dollKits[kitIndex].essence == 'Recklessness' && AppState.recklessness == false){
-      Pop.error(`You're missing the Essence of Recklessness`)
+      Swal.fire({
+        title: `You're missing the Essence of Recklessness!`,
+        toast: true,
+        timer: 4000,
+        timerProgressBar: true,
+        imageUrl: '',
+        position: 'top-end',
+        showConfirmButton: false
+      })
     }
     if(AppState.dollKits[kitIndex].essence == 'Pettiness' && AppState.pettiness == true){
       AppState.dollKits[currentlyEquippedIndex].equipped = false
@@ -71,7 +122,28 @@ class DollService{
       saveState('dollKits', AppState.dollKits)
       saveState('doll', AppState.doll)
     }else if(AppState.dollKits[kitIndex].essence == 'Pettiness' && AppState.pettiness == false){
-      Pop.error(`You're missing the Essence of Pettiness!`)
+      Swal.fire({
+        title: `You're missing the Essence of Pettiness!`,
+        toast: true,
+        timer: 4000,
+        timerProgressBar: true,
+        imageUrl: '',
+        position: 'top-end',
+        showConfirmButton: false
+      })
+    }
+    if(AppState.dollColors[0].unlocked && AppState.dollColors[1].unlocked && AppState.dollColors[2].unlocked && AppState.dollColors[3].unlocked && AppState.dollColors[4].unlocked && AppState.dollKits[0].unlocked && AppState.dollKits[1].unlocked && AppState.dollKits[2].unlocked && AppState.dollKits[3].unlocked && AppState.dollKits[4].unlocked && AppState.dollKits[5].unlocked){
+      Swal.fire({
+        title: `Congratulations! You unlocked all customization. You have now earned the "Prized Patchwork" Doll Color!`,
+        toast: true,
+        showConfirmButton: false,
+        position: 'top',
+        timer: 10000,
+        timerProgressBar: true,
+        imageUrl: '/PatchworkDefaultUnlock.png'
+      })
+      AppState.dollColors[5].unlocked = true
+      saveState('dollColors', AppState.dollColors)
     }
   }
 
@@ -86,7 +158,15 @@ class DollService{
       saveState('dollKits', AppState.dollKits)
       saveState('doll', AppState.doll)
     }else{
-      Pop.error(`You haven't unlocked that doll kit!`)
+      Swal.fire({
+        title: `You don't have that doll kit unlocked!`,
+        toast: true,
+        timer: 4000,
+        timerProgressBar: true,
+        imageUrl: '',
+        position: 'top-end',
+        showConfirmButton: false
+      })
     }
   }
 
@@ -103,7 +183,28 @@ class DollService{
       saveState('dollColors', AppState.dollColors)
       saveState('doll', AppState.doll)
     }else{
-      Pop.error(`You don't have enough Curse Points for that!`)
+      Swal.fire({
+        title: `You don't have enough Curse Points for that!`,
+        toast: true,
+        timer: 4000,
+        timerProgressBar: true,
+        imageUrl: '',
+        position: 'top-end',
+        showConfirmButton: false
+      })
+    }
+    if(AppState.dollColors[0].unlocked && AppState.dollColors[1].unlocked && AppState.dollColors[2].unlocked && AppState.dollColors[3].unlocked && AppState.dollColors[4].unlocked && AppState.dollKits[0].unlocked && AppState.dollKits[1].unlocked && AppState.dollKits[2].unlocked && AppState.dollKits[3].unlocked && AppState.dollKits[4].unlocked && AppState.dollKits[5].unlocked){
+      Swal.fire({
+        title: `Congratulations! You unlocked all customization. You have now earned the "Prized Patchwork" Doll Color!`,
+        toast: true,
+        showConfirmButton: false,
+        position: 'top',
+        timer: 10000,
+        timerProgressBar: true,
+        imageUrl: '/PatchworkDefaultUnlock.png'
+      })
+      AppState.dollColors[5].unlocked = true
+      saveState('dollColors', AppState.dollColors)
     }
   }
 
@@ -117,7 +218,15 @@ class DollService{
       saveState('dollColors', AppState.dollColors)
       saveState('doll', AppState.doll)
     }else{
-      Pop.error(`You haven't unlocked that doll color!`)
+      Swal.fire({
+        title: `You don't have that doll color unlocked!`,
+        toast: true,
+        timer: 4000,
+        timerProgressBar: true,
+        imageUrl: '',
+        position: 'top-end',
+        showConfirmButton: false
+      })
     }
   }
 }
