@@ -131,7 +131,7 @@ export default {
 
   @media screen and (min-width: 375px) {
     .doll{
-    touch-action: pan-x pan-y;
+    touch-action: manipulation;
     }
   }
 </style>
