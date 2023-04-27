@@ -127,11 +127,18 @@ export default {
     animation-name: shake;
     animation-duration: 0.2s;
     animation-iteration-count: 1;
+    -webkit-animation-name: shake;
+    -webkit-animation-duration: 0.2s;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-name: shake;
+    -moz-animation-duration: 0.2s;
+    -moz-animation-iteration-count: 1;
+    -ms-animation-name: shake;
+    -ms-animation-duration: 0.2s;
+    -ms-animation-iteration-count: 1;
+    -o-animation-name: shake;
+    -o-animation-duration: 0.2s;
+    -o-animation-iteration-count: 1;
   }
 
-  @media screen and (min-width: 375px) {
-    .doll{
-    touch-action: manipulation;
-    }
-  }
 </style>
