@@ -128,4 +128,10 @@ export default {
     animation-duration: 0.2s;
     animation-iteration-count: 1;
   }
+
+  @media screen and (min-width: 375px) {
+    .doll{
+    touch-action: pan-x pan-y;
+    }
+  }
 </style>
