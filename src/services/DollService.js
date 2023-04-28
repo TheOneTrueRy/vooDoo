@@ -5,9 +5,6 @@ import { saveState } from "../utils/Store.js"
 
 class DollService{
   updateName(dollName){
-    if(dollName == ''){
-      dollName = 'Name Your Doll!'
-    }
     if(dollName == 'Jeff'){
       Swal.fire({
         title: `No...`,
@@ -24,9 +21,9 @@ class DollService{
         background: '#111111',
         color: '#ffffff'
       })
-      dollName = 'Name Your Doll!'
+      dollName = ''
     }
-    if(dollName != 'Name Your Doll!'){
+    if(dollName != ''){
       Swal.fire({
         title: `Doll name successfully set!`,
         toast: true,

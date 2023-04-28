@@ -26,7 +26,7 @@ export const AppState = reactive({
   doll: {
     kit: 'default',
     color: 'grey',
-    name: 'Name Your Doll!'
+    name: ''
   },
 
   boosts: [

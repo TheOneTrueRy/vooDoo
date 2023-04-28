@@ -10,7 +10,7 @@
           </div>
           <div class="col-12 text-center">
             <form @submit.prevent="updateName()">
-              <input v-model="dollName" type="text" name="doll-name" id="doll-name" class="fs-1 text-center text-light border rounded" @blur="updateName()">
+              <input v-model="dollName" type="text" name="doll-name" id="doll-name" class="fs-1 text-center text-light border rounded" placeholder="Name Your Doll!" @blur="updateName()">
             </form>
           </div>
           <div class="col-12 text-center g-0 pb-1 disable-zoom">
